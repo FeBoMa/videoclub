@@ -14,7 +14,10 @@ class CreateGiftTable extends Migration
     public function up()
     {
         Schema::create('gift', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_gift');
+            $table->string('gift_type');
+            $table->string('gift_name');
+            $table->string('photo');
             $table->timestamps();
         });
     }

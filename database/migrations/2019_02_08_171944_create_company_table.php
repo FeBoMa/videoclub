@@ -14,7 +14,10 @@ class CreateCompanyTable extends Migration
     public function up()
     {
         Schema::create('company', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_company');
+            $table->string('fundation');
+            $table->string('president');
+            $table->string('poster');
             $table->timestamps();
         });
     }

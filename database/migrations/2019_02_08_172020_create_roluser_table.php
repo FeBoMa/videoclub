@@ -14,8 +14,8 @@ class CreateRoluserTable extends Migration
     public function up()
     {
         Schema::create('roluser', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->increments('id_client');
+            $table->increments('id_rol');
         });
     }
 

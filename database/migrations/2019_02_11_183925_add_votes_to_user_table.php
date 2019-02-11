@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClientmoviesTable extends Migration
+class AddVotesToUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateClientmoviesTable extends Migration
      */
     public function up()
     {
-        Schema::create('clientmovies', function (Blueprint $table) {
-            $table->increments('id_movie');
-            $table->increments('id_client');
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('subscription');
         });
     }
 
@@ -26,6 +25,8 @@ class CreateClientmoviesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientmovies');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }
