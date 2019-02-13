@@ -8,13 +8,13 @@ class CreateMoviesTable extends Migration
 {
     /**
      * Run the migrations.
-     *00
+     *
      * @return void
      */
     public function up()
     {
         Schema::create('movies', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->string('title');
             $table->string('year', 8);
             $table->string('director', 64);

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClientmoviesTable extends Migration
+class CreateRolTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateClientmoviesTable extends Migration
      */
     public function up()
     {
-        Schema::create('clientmovies', function (Blueprint $table) {
-            $table->increments('id_movie');
-            $table->increments('id_client');
+        Schema::create('rol', function (Blueprint $table) {
+            $table->increments('id_rol')->unsigned();
+            $table->string('name_rol');
         });
     }
 
@@ -26,6 +26,6 @@ class CreateClientmoviesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientmovies');
+        Schema::dropIfExists('rol');
     }
 }

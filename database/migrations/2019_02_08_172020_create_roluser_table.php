@@ -14,8 +14,11 @@ class CreateRoluserTable extends Migration
     public function up()
     {
         Schema::create('roluser', function (Blueprint $table) {
-            $table->increments('id_client');
-            $table->increments('id_rol');
+            $table->integer('id_rol')->unsigned();
+            $table->foreign('id_rol')->references('id_rol')->on('id_rol');
+
+            $table->integer('id_users')->unsigend();
+            $table->foreign('id_users')->references('id')->on('users');
         });
     }
 
