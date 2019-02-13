@@ -14,13 +14,11 @@ class CreateUsersmoviesTable extends Migration
     public function up()
     {
         Schema::create('usersmovies', function (Blueprint $table) {
-            $table->integer('id_movies')->unsigend()->nullable();
-            $table->foreign('id_movies')->references('id')
-                ->on('movies')->onDelete('cascade');
+            $table->integer('id_movies')->unsigned();
+            $table->foreign('id_movies')->references('id')->on('movies')->onDelete('cascade');
 
-            $table->integer('id_users')->unsigend()->nullable();
-            $table->foreign('id_users')->references('id')
-                ->on('users')->onDelete('cascade');
+            $table->integer('id_users')->unsigned();
+            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
