@@ -16,11 +16,10 @@ class CreateRoluserTable extends Migration
         Schema::create('roluser', function (Blueprint $table) {
             
             $table->integer('id_rol')->unsigned();
-            $table->foreign('id_rol')->references('id_rol')->on('rol');
+            $table->foreign('id_rol')->references('id_rol')->on('rol')->onDelete('cascade');
 
             $table->integer('id_users')->unsigned();
-            $table->foreign('id_users')->references('id')->on('users');
-
+            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
