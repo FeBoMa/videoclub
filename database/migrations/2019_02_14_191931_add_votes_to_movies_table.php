@@ -14,12 +14,12 @@ class AddVotesToMoviesTable extends Migration
     public function up()
     {
         Schema::table('movies', function (Blueprint $table) {
-            $table->integer('id_company')->unsigned();
+            $table->integer('id_company')->unsigned()->nullable();
             $table->foreign('id_company')->references('id_company')->on('company')->onDelete('cascade');
 
-            $table->integer('stock');
-            $table->integer('rented_times');
-            $table->integer('minAge');
+            $table->integer('stock')->nullable();
+            $table->integer('rented_times')->nullable();
+            $table->integer('minAge')->nullable();
         });
     }
 

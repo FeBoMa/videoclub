@@ -12,8 +12,8 @@ class MoviesTableSeeder extends Seeder
      */
     public function run()
     {
-        //self::seedCatalog();
-        //$this->command->info('Tabla catálogo inicializada con datos!');
+        self::seedCatalog();
+        $this->command->info('Tabla catálogo inicializada con datos!');
     }
     private function seedCatalog(){
         DB::table('movies')->delete();

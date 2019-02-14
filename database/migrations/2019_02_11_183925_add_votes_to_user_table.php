@@ -14,8 +14,8 @@ class AddVotesToUserTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('subscription');
-            $table->integer('userAge');
+            $table->string('subscription')->nullable();
+            $table->integer('userAge')->nullable();
         });
     }
 
