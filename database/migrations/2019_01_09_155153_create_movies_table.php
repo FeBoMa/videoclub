@@ -23,6 +23,7 @@ class CreateMoviesTable extends Migration
             $table->text('synopsis');   
             $table->timestamps();
         });
+     
     }
 
     /**
