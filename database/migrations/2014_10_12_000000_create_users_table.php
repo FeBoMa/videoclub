@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             //Se modifica con el permiso del profesor de M07 para evitar el problema que sale con el rememberToken.
-            //$table->rememberToken();
+            //$table->rememberToken(); 
             $table->string('rememberToken');
             $table->timestamps();
         });
