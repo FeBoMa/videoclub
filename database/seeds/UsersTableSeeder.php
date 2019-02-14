@@ -71,7 +71,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'David Otero',
             'email' => 'doter@gmail.com', 
             'password' => '1234', 
-            'rememberToken' => ''
+            'rememberToken' => 'asd'
         ),
         array(
             'name' => 'David Rodrigez',
