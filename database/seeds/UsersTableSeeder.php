@@ -16,18 +16,6 @@ class UsersTableSeeder extends Seeder
         $this->command->info('Tabla usuarios inicializada con datos!');        
     }
 
-
-    private function seedUsers(){
-        DB::table('users')->delete();
-        $this->crea("prueba","prueba@gmail.com","prueba");
-        /*
-        User::create(array(
-        'name' => 'pruebas3',
-        'email' => 'pruebas@pruebas.com',
-        'password' =>'pruebas'));
-        */
-    }
-
     protected function create(array $data) {
         return User::create([
             'name' => $data['name'],
@@ -52,5 +40,53 @@ class UsersTableSeeder extends Seeder
         $user->password = bcrypt($pass);
         $user->save();
     }
+
+    private function seedUsers(){
+        DB::table('users')->delete();
+        foreach( $this->arrayUsuarios as $usuario ) {
+            $p = new User;
+            $p->name = $usuario['name'];
+            $p->email = $usuario['email'];
+            $p->password = bcrypt($usuario['password']);
+            $p->rememberToken = $usuario['rememberToken'];
+            $p->save();
+        }
+    }
+
+    /*
+    private function seedUsers(){
+        DB::table('users')->delete();
+        $this->crea("prueba","prueba@gmail.com","prueba");
+        
+        User::create(array(
+        'name' => 'pruebas3',
+        'email' => 'pruebas@pruebas.com',
+        'password' =>'pruebas'));
+        
+    }
+    */
+
+    private $arrayUsuarios = array(
+        array(
+            'name' => 'David Otero',
+            'email' => 'doter@gmail.com', 
+            'password' => '1234', 
+        ),
+        array(
+            'name' => 'David Rodrigez',
+            'email' => 'drodri@gmail.com', 
+            'password' => '1234', 
+        ),
+        array(
+            'name' => 'Felix Bordes',
+            'email' => 'Fbord@gmail.com', 
+            'password' => '1234', 
+        ),
+        array(
+            'name' => 'pruebas3',
+            'email' => 'pruebas@pruebas.com',
+            'password' =>'pruebas',
+        ),
+    );
 
 }

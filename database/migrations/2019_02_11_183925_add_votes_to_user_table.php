@@ -15,6 +15,7 @@ class AddVotesToUserTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('subscription');
+            $table->integer('userAge');
         });
     }
 

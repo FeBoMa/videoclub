@@ -19,6 +19,8 @@ class CreateUsersmoviesTable extends Migration
 
             $table->integer('id_users')->unsigned();
             $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
+            $table->string('rented');
+            $table->timestamps();
         });
     }
 
