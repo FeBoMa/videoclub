@@ -86,11 +86,17 @@ class UsersTableSeeder extends Seeder
             'rememberToken' => ''
         ),
         array(
-            'name' => 'pruebas3',
+            'name' => 'Marta',
+            'email' => 'Marta@gmail.com',
+            'password' =>'1234',
+            'rememberToken' => ''
+        ),
+        array(
+            'name' => 'pruebas',
             'email' => 'pruebas@pruebas.com',
             'password' =>'pruebas',
             'rememberToken' => ''
-        ),
+        )
     );
 
 }
