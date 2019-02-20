@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGiftTable extends Migration
+class CreateLocalTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateGiftTable extends Migration
      */
     public function up()
     {
-        Schema::create('gift', function (Blueprint $table) {
-            $table->increments('id_gift')->unsigned();
-            $table->string('gift_type');
-            $table->string('gift_name');
-            $table->string('photo');
+        Schema::create('local', function (Blueprint $table) {
+            $table->increments('id_local');
+            $table->string('adress');
+            $table->string('telephone');
+            $table->string('google_maps');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateGiftTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gift');
+        Schema::dropIfExists('local');
     }
 }
