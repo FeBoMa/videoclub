@@ -4,23 +4,21 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersmoviesTable extends Migration
+class CreateLocalmovieTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    
     public function up()
     {
-        Schema::create('usersmovies', function (Blueprint $table) {
+        Schema::create('localmovie', function (Blueprint $table) {
             $table->integer('id_movies')->unsigned();
             $table->foreign('id_movies')->references('id')->on('movies')->onDelete('cascade');
 
-            $table->integer('id_users')->unsigned();
-            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
-            $table->string('rented');
+            $table->integer('id_local')->unsigned();
+            $table->foreign('id_local')->references('id_local')->on('local')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateUsersmoviesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usersmovies');
+        Schema::dropIfExists('localmovie');
     }
 }

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class giftTableSeeder extends Seeder
+class salaTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
