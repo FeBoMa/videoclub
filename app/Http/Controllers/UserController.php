@@ -12,22 +12,22 @@ use Notification;
 class UserController extends Controller
 {
     
-    public function getShow($id)
-    {
-    $user = User::findOrFail($id);
-
-		return view('user.show', array('User'=>$user));
+    public function getShow($id = null){
+      if(!$id){
+        $id = Auth::id();
+       }
+       $user = User::findOrFail($id);
+    
+      return view('user.show', array('User'=>$user));
   }
 
-
-  public function getEdit($id = null)
-  {
-   if(!$id){
-    $id = Auth::id();
-   }
-   $user = User::findOrFail($id);
-
-  return view('user.show', array('User'=>$user));
-}
+  public function getEdit($id = null){
+    if(!$id){
+      $id = Auth::id();
+     }
+     $user = User::findOrFail($id);
+  
+    return view('user.edit', array('User'=>$user));
+  }
 
 }
