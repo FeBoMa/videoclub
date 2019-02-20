@@ -33,7 +33,7 @@ class UsersTableSeeder extends Seeder
         $user->save();
     }
 
-    public function crea($nombre,$email,$pass) {
+    public function crea($nombre,$email,$pass){
         $user = new User;
         $user->name = $nombre;
         $user->email = $email;

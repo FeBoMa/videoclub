@@ -19,6 +19,7 @@ class CreateLocalmovieTable extends Migration
 
             $table->integer('id_local')->unsigned();
             $table->foreign('id_local')->references('id_local')->on('local')->onDelete('cascade');
+            $table->integer('stock')->nullable();
             $table->timestamps();
         });
     }

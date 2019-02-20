@@ -20,8 +20,9 @@
             @php ($estado = "Película disponible")
           @endif
           <p>Estado: {{$estado}}</p>
-          @if($Pelicula['rented'])
 
+
+          @if($Pelicula['rented'])
           <form action="{{action('CatalogController@putReturn', $Pelicula->id)}}" 
             method="POST" style="display:inline">
             {{ method_field('PUT') }}
@@ -30,8 +31,6 @@
                 Devolver película
             </button>
         </form>
-
-
           <!-- <a class="btn btn-danger" href="#" role="button">Devolver película</a>-->
           @else
           <form action="{{action('CatalogController@putRent', $Pelicula->id)}}" 
