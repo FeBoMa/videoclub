@@ -37,8 +37,12 @@ Route::delete('/catalog/delete/{id}', 'CatalogController@deleteMovie');
 
 Route::get('/user', 'UserController@getShow');
 Route::get('/user/edit', 'UserController@getEdit');
+Route::put('/user/edit', 'UserController@putEdit');
+
 Route::get('/user/{id}', 'UserController@getShow');
 Route::get('/user/edit/{id}', 'UserController@getEdit');
+Route::put('/user/edit/{id}', 'UserController@putEdit');
+
 });
 
 

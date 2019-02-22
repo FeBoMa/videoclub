@@ -30,4 +30,20 @@ class UserController extends Controller
     return view('user.edit', array('User'=>$user));
   }
 
+      public function putEdit(Request $request,$id = null)
+    {
+      if(!$id){
+        $id = Auth::id();
+       }
+        $user = User::findOrFail($id);
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->subscription = $request->input('subscription');
+        $user->userAge = $request->input('userAge');
+        $user->save();
+        Notification::success('Success message');
+        
+        return redirect('/user/edit/'.$id);
+    }
+
 }
