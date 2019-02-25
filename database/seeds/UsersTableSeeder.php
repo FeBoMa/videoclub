@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
             'email' => $data['email'],
             //'phone' => $data['phone'],     // Campo añadido
             'password' => bcrypt($data['password']),
-        ]);    
+        ]);
     }
 
     public function store(Request $request) {
