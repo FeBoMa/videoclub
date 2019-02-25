@@ -15,8 +15,8 @@ class CreateLocalTable extends Migration
     {
         Schema::create('local', function (Blueprint $table) {
             $table->increments('id_local');
-            $table->string('adress');
-            $table->string('telephone');
+            $table->string('address');
+            $table->string('telephon');
             $table->string('google_maps');
             $table->timestamps();
         });
