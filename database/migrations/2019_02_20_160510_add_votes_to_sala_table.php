@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSalaTable extends Migration
+class AddVotesToSalaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateSalaTable extends Migration
      */
     public function up()
     {
-        Schema::create('sala', function (Blueprint $table) {
-            $table->increments('id_sala');
-            $table->integer('capacity');
-            $table->timestamps();
+        Schema::table('sala', function (Blueprint $table) {
+            $table->integer('sala_name');
+            $table->string('sala_photo');
         });
     }
 
@@ -27,6 +26,8 @@ class CreateSalaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sala');
+        Schema::table('sala', function (Blueprint $table) {
+            //
+        });
     }
 }
