@@ -25,7 +25,7 @@ class MoviesTableSeeder extends Seeder
             $p->poster = $pelicula['poster'];
             $p->rented = $pelicula['rented'];
             $p->synopsis = $pelicula['synopsis'];
-            $p->save();
+            $p->save();     
         }
     }
 
