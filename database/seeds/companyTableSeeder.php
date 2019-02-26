@@ -9,7 +9,7 @@ class companyTableSeeder extends Seeder {
      * Run the database seeds.
      *
      * @return void
-     */
+     *y/
     public function run() {
 
         self::seedCompany();
