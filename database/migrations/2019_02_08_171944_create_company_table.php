@@ -18,6 +18,7 @@ class CreateCompanyTable extends Migration
             $table->string('fundation');
             $table->string('president');
             $table->string('poster');
+            $table->string('companyName');
             $table->timestamps();
         });
     }
