@@ -33,13 +33,13 @@ class companyTableSeeder extends Seeder {
             'fundation' => '1980',
             'president' => 'John Mayers',
             'companyName' => 'Touchstone',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMjEyMjcyNDI4MF5BMl5BanBnXkFtZTcwMDA5Mzg3OA@@._V1_SX214_AL_.jpg'
+            'poster' => 'https://i.ytimg.com/vi/o5d_7obRIyk/maxresdefault.jpg'
         ),
         array(
             'fundation' => '1900',
             'president' => 'Arnold Schuacheneger',
             'companyName' => '20 Century Fox',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMjEyMjcyNDI4MF5BMl5BanBnXkFtZTcwMDA5Mzg3OA@@._V1_SX214_AL_.jpg'
+            'poster' => 'http://writing.upenn.edu/realarts/images/20th_century_fox.jpg'
         )
     );
 

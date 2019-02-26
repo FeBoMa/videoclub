@@ -22,6 +22,7 @@ class salaTableSeeder extends Seeder {
             $p = new Sala;
             $p->capacity = $sala['capacity'];
             $p->sala_name = $sala['sala_name'];
+            $p->sala_photo = $sala['sala_photo'];
             $p->save();
         }
     }

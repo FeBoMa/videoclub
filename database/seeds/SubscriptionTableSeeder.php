@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Company;
+use App\Subscription;
 
 class SubscriptionTableSeeder extends Seeder {
 
@@ -27,14 +27,12 @@ class SubscriptionTableSeeder extends Seeder {
 
     private $arraySubs = array(
         array(
-            'address' => 'C/Federico',
-            'telephon' => '935667567',
-            'google_maps' => 'prueba google'
+            'subscriptionName' => 'Gold',          
+            'description' => '1 año suscrito'
         ),
         array(
-            'address' => 'C/Faraday',
-            'telephon' => '935667567',
-            'google_maps' => 'prueba google'
+            'subscriptionName' => 'Platino',         
+            'description' => '2 años suscrito'
         )
     );
 

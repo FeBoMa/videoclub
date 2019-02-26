@@ -19,7 +19,7 @@ class rolTableSeeder extends Seeder {
         DB::table('rol')->delete();
         foreach ($this->arrayRols as $rol) {
             $p = new Rol;
-            $p->name_rol = $sala['name_rol'];
+            $p->name_rol = $rol['name_rol'];
             $p->save();
         }
     }
