@@ -20,6 +20,11 @@
                             <span>&#10010</span> Nueva película
                         </a>
                     </li>
+                      <li class="nav-item {{  Request::is('catalog/company') ? 'active' : ''}}">
+                        <a class="nav-link" href="{{url('/catalog/company')}}">
+                            <span>&#10010</span> Compañias
+                        </a>
+                    </li>
                 </ul>
 
                 <ul class="navbar-nav navbar-right">

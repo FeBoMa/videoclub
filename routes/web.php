@@ -33,8 +33,13 @@ Route::put('/catalog/return/{id}', 'CatalogController@putReturn');
 Route::delete('/catalog/delete/{id}', 'CatalogController@deleteMovie');
 
 
+//Company
+Route::get('/catalog/company', 'CompanyController@getIndex');
+Route::get('/catalog/company/show/{id}', 'CompanyController@getShow');
+Route::get('/catalog/company/create', 'CompanyController@getCreate');
+Route::get('/catalog/company/edit/{id}', 'CompanyController@getEdit');
 
-
+//Users
 Route::get('/user', 'UserController@getShow');
 Route::get('/user/edit', 'UserController@getEdit');
 Route::put('/user/edit', 'UserController@putEdit');

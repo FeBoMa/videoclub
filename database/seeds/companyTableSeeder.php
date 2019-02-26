@@ -9,7 +9,7 @@ class companyTableSeeder extends Seeder {
      * Run the database seeds.
      *
      * @return void
-     *y/
+     */
     public function run() {
 
         self::seedCompany();
@@ -23,6 +23,7 @@ class companyTableSeeder extends Seeder {
             $p->fundation = $company['fundation'];
             $p->president = $company['president'];
             $p->poster = $company['poster'];
+            $p->companyName = $company['companyName'];
             $p->save();
         }
     }
@@ -31,11 +32,13 @@ class companyTableSeeder extends Seeder {
         array(
             'fundation' => '1980',
             'president' => 'John Mayers',
+            'companyName' => 'Touchstone',
             'poster' => 'http://ia.media-imdb.com/images/M/MV5BMjEyMjcyNDI4MF5BMl5BanBnXkFtZTcwMDA5Mzg3OA@@._V1_SX214_AL_.jpg'
         ),
         array(
             'fundation' => '1900',
             'president' => 'Arnold Schuacheneger',
+            'companyName' => '20 Century Fox',
             'poster' => 'http://ia.media-imdb.com/images/M/MV5BMjEyMjcyNDI4MF5BMl5BanBnXkFtZTcwMDA5Mzg3OA@@._V1_SX214_AL_.jpg'
         )
     );
