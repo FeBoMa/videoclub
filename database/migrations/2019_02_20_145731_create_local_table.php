@@ -13,14 +13,15 @@ class CreateLocalTable extends Migration
      */
     public function up()
     {
-        Schema::create('local', function (Blueprint $table) {
-            $table->increments('id_local');
-            $table->integer('id_sala')->unsigned();
+        Schema::create('local', function (Blueprint $table) { 
+            $table->increments('id_local')->unsigned();  
+            $table->integer('id_sala')->unsigned(); 
             $table->foreign('id_sala')->references('id_sala')->on('sala')->onDelete('cascade');
             $table->string('address');
             $table->string('telephon');
             $table->string('google_maps');
             $table->timestamps();
+  
         });
     }
 
@@ -34,3 +35,4 @@ class CreateLocalTable extends Migration
         Schema::dropIfExists('local');
     }
 }
+   
