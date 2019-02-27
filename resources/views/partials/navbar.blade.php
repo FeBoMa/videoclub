@@ -25,6 +25,11 @@
                             <span>&#10010</span> Compañias
                         </a>
                     </li>
+                      <li class="nav-item {{  Request::is('catalog/company/create') ? 'active' : ''}}">
+                        <a class="nav-link" href="{{url('/catalog/company/create')}}">
+                            <span>&#10010</span> Añadir Compañia
+                        </a>
+                    </li>
                 </ul>
 
                 <ul class="navbar-nav navbar-right">
