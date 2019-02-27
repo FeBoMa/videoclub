@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLocalTable extends Migration
+class AddVotesToSalaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateLocalTable extends Migration
      */
     public function up()
     {
-        Schema::create('local', function (Blueprint $table) { 
-            $table->increments('id_local')->unsigned();  
-            $table->string('address');
-            $table->string('telephon');
-            $table->string('google_maps');
-            $table->timestamps();
-  
+        Schema::table('sala', function (Blueprint $table) {
+            $table->integer('id_local')->unsigned(); 
+            $table->foreign('id_local')->references('id_local')->on('local')->onDelete('cascade');
         });
     }
 
@@ -30,7 +26,8 @@ class CreateLocalTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('local');
+        Schema::table('sala', function (Blueprint $table) {
+            //
+        });
     }
 }
-   

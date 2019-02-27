@@ -13,9 +13,12 @@ class AddVotesToUserTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {        
+        Schema::table('users', function (Blueprint $table) {
             $table->integer('userAge')->nullable();
-          
+            $table->boolean('confirmed')->default(0);
+            $table->string('confirmed_code')->nullable();
+            $table->integer('id_subscription')->unsigned(); 
+            $table->foreign('id_subscription')->references('id_subscription')->on('subscription')->onDelete('cascade');
         });
     }
 

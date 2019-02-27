@@ -14,9 +14,7 @@ class CreateSubscriptionTable extends Migration
     public function up()
     {
         Schema::create('subscription', function (Blueprint $table) {
-            $table->increments('id_subscription')->unsigned();
-            $table->integer('id_users')->unsigned();
-            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');              
+            $table->increments('id_subscription')->unsigned();             
             $table->string('subscriptionName');
             $table->string('description');
             $table->timestamps();
