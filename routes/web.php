@@ -53,6 +53,7 @@ Route::put('/user/edit/{id}', 'UserController@putEdit');
 
 });
 
+Route::get('/register/verify/{code}', 'UserController@getVerify');
 
 
 

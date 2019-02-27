@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use Mail;
 
 use Notification;
 
@@ -59,9 +60,30 @@ class UserController extends Controller
         $user->password = bcrypt($request->input('password'));
         $user->subscription = $request->input('subscription');
         $user->userAge = $request->input('userAge');
+        $user->confirmation_code = str_random(25);
         $user->save();
+
+        Mail::send('emails.confirmation_code', $request, function($message) use ($request) {
+          $message->to($request->input('email'), $request->input('name'))->subject('Por favor confirma tu correo');
+        });
+
         Notification::success('Success message');
         return redirect('user/add');
         
     }
+    
+    public function verify($code)
+    {
+    $user = User::where('confirmation_code', $code)->first();
+
+    if (! $user){
+      return redirect('/');
+    }else{
+      $user->confirmed = true;
+      $user->confirmation_code = null;
+      $user->save();
+    }
+    Notification::success('Has confirmado correctamente tu correo');
+    return redirect('/login');
+}
 }
