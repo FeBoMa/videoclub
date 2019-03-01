@@ -38,6 +38,10 @@ Route::get('/catalog/company', 'CompanyController@getIndex');
 Route::get('/catalog/company/show/{id}', 'CompanyController@getShow');
 Route::get('/catalog/company/create', 'CompanyController@getCreate');
 Route::get('/catalog/company/edit/{id}', 'CompanyController@getEdit');
+Route::delete('/catalog/company/delete/{id}', 'CompanyController@deleteCompany');
+
+Route::post('/catalog/company/create', 'CompanyController@postCreate');
+Route::put('/catalog/company/edit/{id}', 'CompanyController@putEdit');
 
 //Users
 Route::get('/user', 'UserController@getShow');

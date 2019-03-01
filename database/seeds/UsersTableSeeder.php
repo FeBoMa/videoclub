@@ -49,53 +49,58 @@ class UsersTableSeeder extends Seeder
             $p->email = $usuario['email'];
             $p->password = bcrypt($usuario['password']);
             $p->rememberToken = $usuario['rememberToken'];
+            $p->userAge = $usuario['userAge'];
+            $p->confirmed_code = $usuario['confirmed_code'];
+            $p->id_subscription = $usuario['id_subscription'];
             $p->save();
         }
     }
-
-    /*
-    private function seedUsers(){
-        DB::table('users')->delete();
-        $this->crea("prueba","prueba@gmail.com","prueba");
-        
-        User::create(array(
-        'name' => 'pruebas3',
-        'email' => 'pruebas@pruebas.com',
-        'password' =>'pruebas'));
-        
-    }
-    */
 
     private $arrayUsuarios = array(
         array(
             'name' => 'David Otero',
             'email' => 'doter@gmail.com', 
             'password' => '1234', 
-            'rememberToken' => 'asd'
+            'rememberToken' => 'asd',
+            'userAge' => 24,
+            'confirmed_code' => 0, 
+            'id_subscription' => 1
         ),
         array(
             'name' => 'David Rodrigez',
             'email' => 'drodri@gmail.com', 
             'password' => '1234', 
-            'rememberToken' => ''
+            'rememberToken' => '',
+            'userAge' => 12,
+            'confirmed_code' => 0, 
+            'id_subscription' => 1
         ),
         array(
             'name' => 'Felix Bordes',
             'email' => 'Fbord@gmail.com', 
             'password' => '1234', 
-            'rememberToken' => ''
+            'rememberToken' => '',
+            'userAge' => 86,
+            'confirmed_code' => 0, 
+            'id_subscription' => 1
         ),
         array(
             'name' => 'Marta',
             'email' => 'Marta@gmail.com',
             'password' =>'1234',
-            'rememberToken' => ''
+            'rememberToken' => '',
+            'userAge' => 11,
+            'confirmed_code' => 0, 
+            'id_subscription' => 2
         ),
         array(
             'name' => 'pruebas',
             'email' => 'pruebas@pruebas.com',
             'password' =>'pruebas',
-            'rememberToken' => ''
+            'rememberToken' => '',
+            'userAge' => 99,
+            'confirmed_code' => 0, 
+            'id_subscription' => 2
         )
     );
 
