@@ -12,7 +12,7 @@
             {{$Local->address}}
         </h4>
           <p>Telefono: {{$Local->telephon}}</p>
-          <p>Director: {{$Company->president}}</p>
+    
           
         <form action="{{action('LocalController@deleteLocal', $Local->id_local)}}" 
             method="POST" style="display:inline">
@@ -24,7 +24,7 @@
         </form>
           
           <!--<a class="btn btn-primary" href="#" role="button">Alquilar película</a>-->
-          <a class="btn btn-warning" href="/catalog/company/edit/{{$Local->id_local}}" role="button">Editar local</a>
+          <a class="btn btn-warning" href="/catalog/local/edit/{{$Local->id_local}}" role="button">Editar local</a>
          
           <a class="btn btn-outline-dark" href="/catalog/local" role="button">< Volver al listado</a>
     
