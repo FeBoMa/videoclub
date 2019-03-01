@@ -49,7 +49,9 @@ class UserController extends Controller
 
     public function getCreate()
     {
+      return view('home');
         return view('user.create');
+
     }
 
     public function postCreate(Request $request)
@@ -72,7 +74,7 @@ class UserController extends Controller
         
     }
     
-    public function verify($code)
+    public function getVerify($code)
     {
     $user = User::where('confirmation_code', $code)->first();
 
