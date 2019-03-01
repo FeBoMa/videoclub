@@ -11,7 +11,7 @@ class SubscriptionTableSeeder extends Seeder {
      * @return void
      */
     public function run() {
-        self::seedSubscription();
+        self::seedSubscription(); 
         $this->command->info('Tabla subscription inicializada con datos!');
     }
 

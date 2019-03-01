@@ -12,7 +12,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        self::seedUsers();
+        self::seedUsers(); 
         $this->command->info('Tabla usuarios inicializada con datos!');        
     }
 

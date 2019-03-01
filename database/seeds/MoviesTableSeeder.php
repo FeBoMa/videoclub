@@ -11,7 +11,7 @@ class MoviesTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    { 
         self::seedCatalog();
         $this->command->info('Tabla catálogo inicializada con datos!');
     }
