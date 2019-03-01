@@ -13,7 +13,7 @@ class SalaTableSeeder extends Seeder {
     public function run() {
 
         self::seedSala();
-        $this->command->info('Tabla sala inicializada con datos!');
+        $this->command->info('Tabla sala inicializada con datos!');   
     }
 
     private function seedSala() {
