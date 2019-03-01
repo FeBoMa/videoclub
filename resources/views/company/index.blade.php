@@ -2,6 +2,18 @@
 
 @section('content')
 
+<div>
+
+    <ul>
+        <li class="nav-item {{  Request::is('catalog/company/create') ? 'active' : ''}}">
+            <a href="{{url('/catalog/company/create')}}">
+
+                 Añadir Compañia
+            </a>
+        </li>
+    </ul>
+    
+</div>
 <div class="row">
     @foreach( $arrayCompanies as $company )
     <div class="col-xs-6 col-sm-4 col-md-3 text-center">
@@ -11,6 +23,7 @@
                 {{$company->companyName}}
             </h4>
         </a>
+
     </div>
     @endforeach
 </div>

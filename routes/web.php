@@ -43,6 +43,16 @@ Route::delete('/catalog/company/delete/{id}', 'CompanyController@deleteCompany')
 Route::post('/catalog/company/create', 'CompanyController@postCreate');
 Route::put('/catalog/company/edit/{id}', 'CompanyController@putEdit');
 
+//Local
+Route::get('/catalog/local', 'LocalController@getIndex');
+Route::get('/catalog/local/show/{id}', 'LocalController@getShow');
+Route::get('/catalog/local/create', 'LocalController@getCreate');
+Route::get('/catalog/local/edit/{id}', 'LocalController@getEdit');
+Route::delete('/catalog/local/delete/{id}', 'LocalController@deleteLocal');
+
+Route::post('/catalog/local/create', 'LocalController@postCreate');
+Route::put('/catalog/local/edit/{id}', 'LocalController@putEdit');
+
 //Users
 Route::get('/user', 'UserController@getShow');
 Route::get('/user/edit', 'UserController@getEdit');
