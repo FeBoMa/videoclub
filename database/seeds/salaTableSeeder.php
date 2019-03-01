@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Sala;
 
-class salaTableSeeder extends Seeder {
+class SalaTableSeeder extends Seeder {
 
     /**
      * Run the database seeds.
@@ -23,6 +23,7 @@ class salaTableSeeder extends Seeder {
             $p->capacity = $sala['capacity'];
             $p->sala_name = $sala['sala_name'];
             $p->sala_photo = $sala['sala_photo'];
+            $p->id_local = $sala['id_local'];
             $p->save();
         }
     }
@@ -31,12 +32,20 @@ class salaTableSeeder extends Seeder {
         array(
             'capacity' => '1980',
             'sala_name' => 'John Mayers',
-            'sala_photo' => 'photoooo'
+            'sala_photo' => 'photoooo',
+            'id_local' => 1
+        ),
+        array(
+            'capacity' => '3',
+            'sala_name' => 'Indiana Bones',
+            'sala_photo' => 'photoooo',
+            'id_local' => 1
         ),
         array(
             'capacity' => '1900',
             'sala_name' => 'Arnold Schuacheneger',
-            'sala_photo' => 'photooo'
+            'sala_photo' => 'photooo',
+            'id_local' => 2
         )
     );
 

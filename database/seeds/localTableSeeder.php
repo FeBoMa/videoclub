@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Local;
 
-class localTableSeeder extends Seeder
+class LocalTableSeeder extends Seeder
 {
       /**
      * Run the database seeds.
@@ -29,13 +29,13 @@ class localTableSeeder extends Seeder
 
     private $arrayLocals = array(
         array(
-            'address' => 'C/Federico',
+            'address' => 'C/Federicons',
             'telephon' => '935667567',
             'google_maps' => 'prueba google'
         ),
         array(
-            'fundation' => 'C/Faraday',
-            'president' => '935667567',
+            'address' => 'C/Faraday',
+            'telephon' => '935667567',
             'google_maps' => 'prueba google'
         )
     );
