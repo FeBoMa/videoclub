@@ -3,16 +3,17 @@
 @section('content')
 
 <div>
-
     <ul>
         <li class="nav-item {{  Request::is('catalog/local/create') ? 'active' : ''}}">
             <a  href="{{url('/catalog/local/create')}}">
-                 Añadir Local
+                Añadir Local
             </a>
         </li>
-    </ul>
 
+</ul>
+  
 </div>
+
 
 <div class="row">
     @foreach( $arrayLocals as $local )

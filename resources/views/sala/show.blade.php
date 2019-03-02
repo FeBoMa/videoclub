@@ -25,8 +25,7 @@
           
           <!--<a class="btn btn-primary" href="#" role="button">Alquilar película</a>-->
           <a class="btn btn-warning" href="/catalog/local/edit/{{$Local->id_local}}" role="button">Editar local</a>
-          
-          <a class="btn btn-info" href="/catalog/local/sala/" role="button">Salas</a>
+          <a class="btn btn-info" href="/catalog/local/sala/{{$Local->id_local}}" role="button">Salas</a>
          
           <a class="btn btn-outline-dark" href="/catalog/local" role="button">< Volver al listado</a>
     
