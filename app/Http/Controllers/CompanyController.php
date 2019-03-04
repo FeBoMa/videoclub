@@ -33,7 +33,7 @@ class CompanyController extends Controller {
         $Company->poster = $request->input('poster');
         $Company->save();
         // Notification::success('Success message');
-        return redirect('/catalog/company');
+        return redirect('/company');
         //return view('catalog.create');
     }
 
@@ -53,14 +53,14 @@ class CompanyController extends Controller {
         $Company->poster = $request->input('poster');
         $Company->save();
       //  Notification::success('Success message');
-        return redirect('/catalog/company/show/' . $id);
+        return redirect('/company/show/' . $id);
     }
 
     public function deleteCompany($id) {
         $Company = Company::findOrFail($id);
         $Company->delete();
         // Notification::success('Success Delete');
-        return redirect('/catalog/company');
+        return redirect('/company');
     }
 
 }

@@ -34,14 +34,14 @@ Route::delete('/catalog/delete/{id}', 'CatalogController@deleteMovie');
 
 
 //Company
-Route::get('/catalog/company', 'CompanyController@getIndex');
-Route::get('/catalog/company/show/{id}', 'CompanyController@getShow');
-Route::get('/catalog/company/create', 'CompanyController@getCreate');
-Route::get('/catalog/company/edit/{id}', 'CompanyController@getEdit');
-Route::delete('/catalog/company/delete/{id}', 'CompanyController@deleteCompany');
+Route::get('/company', 'CompanyController@getIndex');
+Route::get('/company/show/{id}', 'CompanyController@getShow');
+Route::get('/company/create', 'CompanyController@getCreate');
+Route::get('/company/edit/{id}', 'CompanyController@getEdit');
+Route::delete('/company/delete/{id}', 'CompanyController@deleteCompany');
 
-Route::post('/catalog/company/create', 'CompanyController@postCreate');
-Route::put('/catalog/company/edit/{id}', 'CompanyController@putEdit');
+Route::post('/company/create', 'CompanyController@postCreate');
+Route::put('/company/edit/{id}', 'CompanyController@putEdit');
 
 //Local
 Route::get('/local','LocalController@getIndex');

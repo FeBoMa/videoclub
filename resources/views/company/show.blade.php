@@ -24,9 +24,9 @@
         </form>
           
           <!--<a class="btn btn-primary" href="#" role="button">Alquilar película</a>-->
-          <a class="btn btn-warning" href="/catalog/company/edit/{{$Company->id_company}}" role="button">Editar la compañia</a>
+          <a class="btn btn-warning" href="/company/edit/{{$Company->id_company}}" role="button">Editar la compañia</a>
          
-          <a class="btn btn-outline-dark" href="/catalog/company" role="button">< Volver al listado</a>
+          <a class="btn btn-outline-dark" href="/company/" role="button">< Volver al listado</a>
     
     
 
