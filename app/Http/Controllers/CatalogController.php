@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\Movie;
+use App\Company;
 use Notification;
 
 class CatalogController extends Controller
@@ -20,8 +21,8 @@ class CatalogController extends Controller
     public function getShow($id)
     {
 		$pelis = Movie::findOrFail($id);
-
-		return view('catalog.show', array('Pelicula'=>$pelis));
+        $company = Company::findOrFail($pelis->id_company);
+		return view('catalog.show', array('Pelicula'=>$pelis), array('Company'=>$company));
 		//return view('catalog.show', array('Pelicula'=>$this->arrayPeliculas[$id],'id'=>$id));
 
     }

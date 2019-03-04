@@ -10,6 +10,7 @@
     <div class="col-sm-8">
         <h4 style="min-height:45px;margin:5px 0 10px 0">
             {{$Pelicula->title}}
+            
         </h4>
           <p>Año: {{$Pelicula->year}}</p>
           <p>Director: {{$Pelicula->director}}</p>
@@ -20,7 +21,9 @@
             @php ($estado = "Película disponible")
           @endif
           <p>Estado: {{$estado}}</p>
-
+          <p>Compañia: {{$Company->companyName}}
+            <img src="{{$Company->poster}}" style="height:50px"/>
+          </p>
 
           @if($Pelicula['rented'])
           <form action="{{action('CatalogController@putReturn', $Pelicula->id)}}" 
