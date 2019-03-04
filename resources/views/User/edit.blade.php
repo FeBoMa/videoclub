@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-
+<?php print_r($Sub); ?>
 <div class="row" style="margin-top:40px">
     <div class="offset-md-3 col-md-6">
        <div class="card">
@@ -9,7 +9,8 @@
             Modificar Usuario
           </div>
           <div class="card-body" style="padding:30px">
- 
+            
+          
              {{-- TODO: Abrir el formulario e indicar el método POST --}}
             <form method="POST">
              {{method_field('PUT')}}

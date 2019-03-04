@@ -20,6 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(RolTableSeeder::class);
         $this->call(LocalTableSeeder::class);
         $this->call(SalaTableSeeder::class);
-        
+ 
     }
 }
