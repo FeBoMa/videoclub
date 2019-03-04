@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Subscription;
 use Auth;
 use Mail;
 
@@ -27,8 +28,8 @@ class UserController extends Controller
       $id = Auth::id();
      }
      $user = User::findOrFail($id);
-  
-    return view('user.edit', array('User'=>$user));
+     $sub = Subscription::all();
+    return view('user.edit', array('User'=>$user, array('Sub'=>$sub)));
   }
 
       public function putEdit(Request $request,$id = null)
