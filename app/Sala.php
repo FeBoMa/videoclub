@@ -11,7 +11,7 @@ class Sala extends Model
     protected $primaryKey = 'id_sala';
     
     
-    public function local()
+    public function locals()
     {
         return $this->belongsTo('App\Local');
     }

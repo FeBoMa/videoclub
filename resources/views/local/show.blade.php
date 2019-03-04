@@ -4,10 +4,10 @@
 <?php
 //print_r($list);
 
-foreach ($list as $key) {
-    print_r($key);
-    echo "<br><br>";
-}
+//foreach ($list as $key) {
+  //  print_r($key);
+   // echo "<br><br>";
+//}
 ?>
 
 <div class="row">
@@ -33,7 +33,7 @@ foreach ($list as $key) {
 
         <!--<a class="btn btn-primary" href="#" role="button">Alquilar película</a>-->
         <a class="btn btn-warning" href="/local/edit/{{$Local->id}}" role="button">Editar local</a>
-        <a class="btn btn-warning" href="/sala/{{$Local->id}}" role="button">Salas</a>
+        <a class="btn btn-warning" href="/sala" role="button">Salas</a>
 
         <a class="btn btn-outline-dark" href="/local" role="button">< Volver al listado</a>
 

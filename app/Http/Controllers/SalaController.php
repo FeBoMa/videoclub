@@ -11,7 +11,8 @@ class SalaController extends Controller {
     
     public function getIndex() {
         $sala = Sala::all();
-        return view('sala.index', array('arraySalas' => $sala));
+        $list = $sala->locals;
+        return view('sala.index', compact('list'),array('arraySalas' => $sala));
         //return view('catalog.index',array('arrayPeliculas'=>$this->arrayPeliculas));
     }
 

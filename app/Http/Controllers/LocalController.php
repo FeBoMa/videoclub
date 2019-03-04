@@ -16,12 +16,9 @@ class LocalController extends Controller {
     public function getShow($id){
         $local = Local::findOrFail($id);
         $list = $local->salas;
-        
-        
-  
+ 
         return view('local.show', compact('list'),array('Local' => $local));
-        
-        
+               
         
     }
 

@@ -2,10 +2,19 @@
 
 @section('content')
 
+<?php
+print_r($list);
+
+foreach ($list as $key) {
+    print_r($key);
+    echo "<br><br>";
+}
+?>
+
 <div>
     <ul>
-        <li class="nav-item {{  Request::is('catalog/local/sala/create') ? 'active' : ''}}">
-            <a  href="{{url('/catalog/local/sala/create')}}">
+        <li class="nav-item {{  Request::is('/sala/create') ? 'active' : ''}}">
+            <a  href="{{url('/sala/create')}}">
                 Añadir Sala
             </a>
         </li>
@@ -19,11 +28,12 @@
 
 <div class="row">
     
-    $salas = App\Local::find(2)->salas;
-    @foreach( $salas as $sala )
+   
+    @foreach( $arraySalas as $sala )
+   
     
     <div class="col-xs-6 col-sm-4 col-md-3 text-center">
-        <a href="{{ url('/catalog/local/sala/show/' . $sala->id_sala) }}">
+        <a href="{{ url('/sala/show/' . $sala->id_sala) }}">
             <img src="{{$sala->sala_photo}}" style="height:200px; width:200px;"/>
             <h4 style="min-height:45px;margin:5px 0 10px 0">
                 {{$sala->sala_name}}
@@ -31,6 +41,7 @@
             
         </a>
     </div>
+ 
     @endforeach
 </div>
 
