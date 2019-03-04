@@ -53,6 +53,16 @@ Route::delete('/local/delete/{id}', 'LocalController@deleteLocal');
 Route::post('/local/create', 'LocalController@postCreate');
 Route::put('/local/edit/{id}', 'LocalController@putEdit');
 
+//Salas
+Route::get('/sala','SalaController@getIndex');
+Route::get('/sala/show/{id}', 'SalaController@getShow');
+Route::get('/sala/create', 'SalaController@getCreate');
+Route::get('/sala/edit/{id}', 'SalaController@getEdit');
+Route::delete('/sala/delete/{id}', 'SalaController@deleteSala');
+
+Route::post('/sala/create', 'SalaController@postCreate');
+Route::put('/sala/edit/{id}', 'SalaController@putEdit');
+
 
 //Users
 Route::get('/user', 'UserController@getShow');

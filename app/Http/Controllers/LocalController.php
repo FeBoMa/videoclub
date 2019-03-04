@@ -16,8 +16,13 @@ class LocalController extends Controller {
     public function getShow($id){
         $local = Local::findOrFail($id);
         $list = $local->salas;
+        
+        
   
-        return view('local.show', compact('list'));
+        return view('local.show', compact('list'),array('Local' => $local));
+        
+        
+        
     }
 
     public function getCreate() {
@@ -31,7 +36,7 @@ class LocalController extends Controller {
         $Local->google_maps = $request->input('google_maps');    
         $Local->save();
         // Notification::success('Success message');
-        return redirect('/catalog/local');
+        return redirect('/local');
         //return view('catalog.create');
     }
 
@@ -57,7 +62,7 @@ class LocalController extends Controller {
         $Local = Local::findOrFail($id);
         $Local->delete();
         // Notification::success('Success Delete');
-        return redirect('/catalog/local');
+        return redirect('/local');
     }
 
 }
