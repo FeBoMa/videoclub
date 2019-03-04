@@ -16,21 +16,21 @@
                         Catálogo
                     </a>
                 </li>
-                <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
+                <li class="nav-item {{  Request::is('/catalog/create') ? 'active' : ''}}">
                     <a class="nav-link" href="{{url('/catalog/create')}}">
                         <span>&#10010</span> Nueva película
                     </a>
                 </li>
 
 
-                <li class="nav-item {{  Request::is('catalog/company') ? 'active' : ''}}">
-                    <a class="nav-link" href="{{url('/catalog/company')}}">                      
+                <li class="nav-item {{  Request::is('/company') ? 'active' : ''}}">
+                    <a class="nav-link" href="{{url('/company')}}">                      
                         Compañias
                     </a>
                 </li>
 
-                <li class="nav-item {{  Request::is('catalog/local') ? 'active' : ''}}">
-                    <a class="nav-link" href="{{url('/catalog/local')}}">
+                <li class="nav-item {{  Request::is('/local') ? 'active' : ''}}">
+                    <a class="nav-link" href="{{url('/local')}}">
                         Locales
                     </a>
                 </li>

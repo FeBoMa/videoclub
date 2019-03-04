@@ -13,12 +13,11 @@ class LocalController extends Controller {
         //return view('catalog.index',array('arrayPeliculas'=>$this->arrayPeliculas));
     }
 
-    public function getShow($id) {
-
+    public function getShow($id){
         $local = Local::findOrFail($id);
-
-        return view('local.show', array('Local' => $local));
-        //return view('company.show', array('Company'=>$this->arrayCompanies[$id],'id'=>$id));
+        $list = $local->salas;
+  
+        return view('local.show', compact('list'));
     }
 
     public function getCreate() {

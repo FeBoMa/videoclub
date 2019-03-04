@@ -23,7 +23,7 @@ class SalaTableSeeder extends Seeder {
             $p->capacity = $sala['capacity'];
             $p->sala_name = $sala['sala_name'];
             $p->sala_photo = $sala['sala_photo'];
-            $p->id_local = $sala['id_local'];
+            $p->local_id = $sala['local_id'];
             $p->save();
         }
     }
@@ -33,19 +33,19 @@ class SalaTableSeeder extends Seeder {
             'capacity' => '1980',
             'sala_name' => 'John Mayers',
             'sala_photo' => 'photoooo',
-            'id_local' => 1
+            'local_id' => 1
         ),
         array(
             'capacity' => '3',
             'sala_name' => 'Indiana Bones',
             'sala_photo' => 'photoooo',
-            'id_local' => 1
+            'local_id' => 1
         ),
         array(
             'capacity' => '1900',
             'sala_name' => 'Arnold Schuacheneger',
             'sala_photo' => 'photooo',
-            'id_local' => 2
+            'local_id' => 2
         )
     );
 

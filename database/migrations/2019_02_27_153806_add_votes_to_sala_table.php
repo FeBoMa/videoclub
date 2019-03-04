@@ -14,8 +14,8 @@ class AddVotesToSalaTable extends Migration
     public function up()
     {
         Schema::table('sala', function (Blueprint $table) {
-            $table->integer('id_local')->unsigned(); 
-            $table->foreign('id_local')->references('id_local')->on('local')->onDelete('cascade');
+            $table->integer('local_id')->unsigned(); 
+            $table->foreign('local_id')->references('id')->on('local')->onDelete('cascade');
         });
     }
 

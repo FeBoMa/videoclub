@@ -14,7 +14,7 @@ class CreateLocalTable extends Migration
     public function up()
     {
         Schema::create('local', function (Blueprint $table) { 
-            $table->increments('id_local')->unsigned();  
+            $table->increments('id')->unsigned();  
             $table->string('address');
             $table->string('telephon');
             $table->string('google_maps');

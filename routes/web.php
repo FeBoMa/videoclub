@@ -44,24 +44,15 @@ Route::post('/catalog/company/create', 'CompanyController@postCreate');
 Route::put('/catalog/company/edit/{id}', 'CompanyController@putEdit');
 
 //Local
-Route::get('/catalog/local', 'LocalController@getIndex');
-Route::get('/catalog/local/show/{id}', 'LocalController@getShow');
-Route::get('/catalog/local/create', 'LocalController@getCreate');
-Route::get('/catalog/local/edit/{id}', 'LocalController@getEdit');
-Route::delete('/catalog/local/delete/{id}', 'LocalController@deleteLocal');
+Route::get('/local','LocalController@getIndex');
+Route::get('/local/show/{id}', 'LocalController@getShow');
+Route::get('/local/create', 'LocalController@getCreate');
+Route::get('/local/edit/{id}', 'LocalController@getEdit');
+Route::delete('/local/delete/{id}', 'LocalController@deleteLocal');
 
-Route::post('/catalog/local/create', 'LocalController@postCreate');
-Route::put('/catalog/local/edit/{id}', 'LocalController@putEdit');
+Route::post('/local/create', 'LocalController@postCreate');
+Route::put('/local/edit/{id}', 'LocalController@putEdit');
 
-//Local
-Route::get('/catalog/local/sala', 'SalaController@getIndex');
-Route::get('/catalog/local/sala/show/{id}', 'SalaController@getShow');
-Route::get('/catalog/local/sala/create', 'SalaController@getCreate');
-Route::get('/catalog/local/sala/edit/{id}', 'SalaController@getEdit');
-Route::delete('/catalog/local/sala/delete/{id}', 'SalaController@deleteSala');
-
-Route::post('/catalog/local/sala/create', 'SalaController@postCreate');
-Route::put('/catalog/local/sala/edit/{id}', 'SalaController@putEdit');
 
 //Users
 Route::get('/user', 'UserController@getShow');
