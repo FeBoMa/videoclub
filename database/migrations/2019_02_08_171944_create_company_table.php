@@ -17,7 +17,7 @@ class CreateCompanyTable extends Migration
             $table->increments('id_company')->unsigned();
             $table->string('fundation');
             $table->string('president');
-            $table->string('poster');
+            $table->string('poster',9999);
             $table->string('companyName');
             $table->timestamps();
         });
