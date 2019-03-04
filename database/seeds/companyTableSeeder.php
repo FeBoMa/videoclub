@@ -36,6 +36,12 @@ class CompanyTableSeeder extends Seeder {
             'poster' => 'https://i.ytimg.com/vi/o5d_7obRIyk/maxresdefault.jpg'
         ),
         array(
+            'fundation' => '1912',
+            'president' => 'Jim Gianopulos',
+            'companyName' => 'Paramount Pictures',
+            'poster' => 'https://upload.wikimedia.org/wikipedia/commons/7/77/Paramount_logo_1914.jpg'
+        ),
+        array(
             'fundation' => '1900',
             'president' => 'Arnold Schuacheneger',
             'companyName' => '20 Century Fox',
