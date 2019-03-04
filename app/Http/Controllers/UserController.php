@@ -29,7 +29,7 @@ class UserController extends Controller
      }
      $user = User::findOrFail($id);
      $sub = Subscription::all();
-    return view('user.edit', array('User'=>$user, array('Sub'=>$sub)));
+    return view('user.edit', compact('user', 'sub'));
   }
 
       public function putEdit(Request $request,$id = null)
@@ -40,7 +40,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->name = $request->input('name');
         $user->email = $request->input('email');
-        $user->subscription = $request->input('subscription');
+        $user->id_subscription = $request->input('id_subscription');
         $user->userAge = $request->input('userAge');
         $user->save();
         Notification::success('Success message');

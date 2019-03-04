@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-<?php print_r($Sub); ?>
 <div class="row" style="margin-top:40px">
     <div class="offset-md-3 col-md-6">
        <div class="card">
@@ -19,26 +18,41 @@
 
              <div class="form-group">
                 <label for="Nombre">Nombre</label>
-             <input type="text" name="name" id="name" class="form-control" value="{{$User->name}}">
+             <input type="text" name="name" id="name" class="form-control" value="{{$user->name}}">
              </div>
  
              <div class="form-group">
 
                 <label for="email">Correo</label>
-                <input type="email" name="email" id="email" class="form-control" value="{{$User->email}}">
+                <input type="email" name="email" id="email" class="form-control" value="{{$user->email}}">
 
              </div>
  
              <div class="form-group">
-                <label for="subscription">Subscripción</label>
-                <input type="text" name="subscription" id="subscription" class="form-control" value="{{$User->subscription}}">
-
+                  <label for="id_subscription">Subscripción</label><br>
+ 
+  <select name="id_subscription"> 
+      <?php 
+      foreach ($sub as $key) {
+         ?>
+         <option value="<?= $key->id_subscription ?>"
+           <?php 
+            if($key->id_subscription == $user->id_subscription){
+               echo "selected";
+            }
+            ?>
+            
+            ><?= $key->subscriptionName ?></option> 
+         <?php
+         }
+         ?>
+   </select>
              </div>
  
              <div class="form-group">
                
                 <label for="userAge">Edad</label>
-                <input type="number" name="userAge" id="userAge" class="form-control" value="{{$User->userAge}}">
+                <input type="number" name="userAge" id="userAge" class="form-control" value="{{$user->userAge}}">
              </div>
  
  
