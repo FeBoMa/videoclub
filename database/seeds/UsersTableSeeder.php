@@ -51,7 +51,7 @@ class UsersTableSeeder extends Seeder
             $p->rememberToken = $usuario['rememberToken'];
             $p->userAge = $usuario['userAge'];
             $p->confirmed_code = $usuario['confirmed_code'];
-            $p->id_subscription = $usuario['id_subscription'];
+            $p->subscription_id = $usuario['subscription_id'];
             $p->save();
         }
     }
@@ -64,7 +64,7 @@ class UsersTableSeeder extends Seeder
             'rememberToken' => 'asd',
             'userAge' => 24,
             'confirmed_code' => 0, 
-            'id_subscription' => 1
+            'subscription_id' => 1
         ),
         array(
             'name' => 'David Rodrigez',
@@ -73,7 +73,7 @@ class UsersTableSeeder extends Seeder
             'rememberToken' => '',
             'userAge' => 12,
             'confirmed_code' => 0, 
-            'id_subscription' => 1
+            'subscription_id' => 1
         ),
         array(
             'name' => 'Felix Bordes',
@@ -82,7 +82,7 @@ class UsersTableSeeder extends Seeder
             'rememberToken' => '',
             'userAge' => 86,
             'confirmed_code' => 0, 
-            'id_subscription' => 1
+            'subscription_id' => 1
         ),
         array(
             'name' => 'Marta',
@@ -91,7 +91,7 @@ class UsersTableSeeder extends Seeder
             'rememberToken' => '',
             'userAge' => 11,
             'confirmed_code' => 0, 
-            'id_subscription' => 2
+            'subscription_id' => 2
         ),
         array(
             'name' => 'pruebas',
@@ -100,7 +100,7 @@ class UsersTableSeeder extends Seeder
             'rememberToken' => '',
             'userAge' => 99,
             'confirmed_code' => 0, 
-            'id_subscription' => 2
+            'subscription_id' => 2
         )
     );
 

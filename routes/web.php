@@ -72,6 +72,9 @@ Route::get('/user/{id}', 'UserController@getShow');
 Route::get('/user/edit/{id}', 'UserController@getEdit');
 Route::put('/user/edit/{id}', 'UserController@putEdit');
 
+//Subs
+Route::get('/subscription/{id}', 'SubscriptionController@getShow');
+
 });
 
 Route::get('/user/add', 'UserController@getCreate');

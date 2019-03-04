@@ -8,7 +8,6 @@
             Modificar Usuario
           </div>
           <div class="card-body" style="padding:30px">
-            
           
              {{-- TODO: Abrir el formulario e indicar el método POST --}}
             <form method="POST">
