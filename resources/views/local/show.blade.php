@@ -3,10 +3,9 @@
 @section('content')
 <?php
 //print_r($list);
-
 //foreach ($list as $key) {
-  //  print_r($key);
-   // echo "<br><br>";
+//  print_r($key);
+// echo "<br><br>";
 //}
 ?>
 
@@ -30,13 +29,36 @@
                 Eliminar
             </button>
         </form>
-
         <!--<a class="btn btn-primary" href="#" role="button">Alquilar película</a>-->
-        <a class="btn btn-warning" href="/local/edit/{{$Local->id}}" role="button">Editar local</a>
-        <a class="btn btn-warning" href="/sala" role="button">Salas</a>
-
+        <a class="btn btn-warning" href="/local/edit/{{$Local->id}}" role="button">Editar local</a>       
         <a class="btn btn-outline-dark" href="/local" role="button">< Volver al listado</a>
 
     </div>
+    
+
+    <h4 style="min-height:45px;margin-top:70px;">
+        
+        <a class="btn btn-warning" href="/sala/create/{{$Local->id}}" role="button">Añadir Sala</a>  
+    </h4>
+   
+      
+
+    
+    @foreach( $list as $key )
+
+    <div style="margin-top: 40px" class="col-xs-6 col-sm-4 col-md-3 text-center">
+        <a href="{{ url('/sala/show/' . $key->id) }}">
+            <img src="{{$key->sala_photo}}" style="height:200px; width:200px;"/>
+            <h4 style="min-height:45px;margin:5px 0 10px 0">
+                {{$key->sala_name}}
+            </h4>
+
+        </a>
+    </div>
+    @endforeach
 </div>
+
+
+
+
 @stop

@@ -8,7 +8,7 @@ class Sala extends Model
 {
     //
     protected $table = "sala";
-    protected $primaryKey = 'id_sala';
+   // protected $primaryKey = 'id_sala';
     
     
     public function locals()

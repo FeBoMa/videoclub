@@ -6,7 +6,7 @@
     <div class="offset-md-3 col-md-6">
        <div class="card">
           <div class="card-header text-center">
-             Añadir Local
+             Añadir Sala
           </div>
           <div class="card-body" style="padding:30px">
  
@@ -17,26 +17,32 @@
              {{ csrf_field() }}
  
              <div class="form-group">
-                <label for="google_maps">google_maps</label>
-                <input type="text" name="google_maps" id="google_maps" class="form-control">
+                <label for="sala_photo">Foto Sala</label>
+                <input type="text" name="sala_photo" id="sala_photo" class="form-control">
              </div>
  
              <div class="form-group">
 
-                <label for="address">Dirección</label>
-                <input type="text" name="address" id="address" class="form-control">
+                <label for="sala_name">Nombre Sala</label>
+                <input type="text" name="sala_name" id="sala_name" class="form-control">
 
              </div>
  
              <div class="form-group">
-                <label for="telephon">Presidente</label>
-                <input type="text" name="telephon" id="telephon" class="form-control">
+                <label for="capacity">Capacidad Sala</label>
+                <input type="text" name="capacity" id="capacity" class="form-control">
 
              </div> 
+             
+              <div class="form-group">
+                <label hidden for="local_id">ID LOCAL</label>
+                <input hidden type="text" name="local_id" id="local_id" class="form-control" value="{{$Local->id}}">
+
+             </div>
 
              <div class="form-group text-center">
                 <button type="submit" class="btn btn-primary" style="padding:8px 75px;margin-top:25px;">
-                    Añadir Local
+                    Añadir Sala
                 </button>
              </div>
  
