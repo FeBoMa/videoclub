@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Local;
+use App\Movie;
 use Illuminate\Http\Request;
 
 class LocalController extends Controller {
@@ -23,7 +24,8 @@ class LocalController extends Controller {
     }
 
     public function getCreate() {
-        return view('local.create');
+        $pelis = Movie::all();
+        return view('local.create', array('arrayPeliculas' => $pelis));
     }
 
     public function postCreate(Request $request) {
@@ -32,6 +34,10 @@ class LocalController extends Controller {
         $Local->telephon = $request->input('telephon');
         $Local->google_maps = $request->input('google_maps');    
         $Local->save();
+        
+        //$nuevoLocal = Local::all();
+        //$nuevoLocal[count($nuevoLocal)-1]->id;
+
         // Notification::success('Success message');
         return redirect('/local');
         //return view('catalog.create');
