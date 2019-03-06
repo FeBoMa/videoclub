@@ -44,6 +44,20 @@
                 <label for="synopsis">Resumen</label>
                 <textarea name="synopsis" id="synopsis" class="form-control" rows="3">{{$Pelicula->synopsis}}</textarea>
              </div>
+
+             <div class="form-group">
+                        <label for="synopsis">Comapñia</label>
+                        <select name="id_company" id="id_company" class="form-control">
+                           @foreach($Company as $com)
+                              <option name="id_company" id="id_company" value="{{$com->id_company}}">{{$com->id_company}}.- {{$com->companyName}}</option>
+                           @endforeach
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="minAge">Edad minima</label>
+                        <input type="number" min="0" max="18" name="minAge" id="minAge" class="form-control" rows="3"value="{{$Pelicula->minAge}}">
+                    </div>
  
              <div class="form-group text-center">
                 <button type="submit" class="btn btn-primary" style="padding:8px 75px;margin-top:25px;">

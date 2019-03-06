@@ -24,6 +24,7 @@
           <p>Compañia: {{$Company->companyName}}
             <img src="{{$Company->poster}}" style="height:50px"/>
           </p>
+          <p>Edad minima: {{$Pelicula->minAge}} años</p>
 
           @if($Pelicula['rented'])
           <form action="{{action('CatalogController@putReturn', $Pelicula->id)}}" 

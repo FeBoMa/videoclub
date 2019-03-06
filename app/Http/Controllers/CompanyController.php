@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Company;
+use App\Movie;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller {
@@ -16,8 +17,8 @@ class CompanyController extends Controller {
     public function getShow($id) {
 
         $compa = Company::findOrFail($id);
-
-        return view('company.show', array('Company' => $compa));
+        $pelis = Movie::all();
+        return view('company.show', array('Company' => $compa), array('arrayPeliculas'=>$pelis));
         //return view('company.show', array('Company'=>$this->arrayCompanies[$id],'id'=>$id));
     }
 
