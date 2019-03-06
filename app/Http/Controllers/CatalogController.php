@@ -29,13 +29,15 @@ class CatalogController extends Controller
 
     public function getCreate()
     {
-        return view('catalog.create');
+        $company = Company::all();
+        return view('catalog.create', array('Company'=>$company));
     }
     
     public function getEdit($id)
     {
-		$pelis = Movie::findOrFail($id);
-        return view('catalog.edit', array('Pelicula'=>$pelis));
+        $pelis = Movie::findOrFail($id);
+        $company = Company::all();
+        return view('catalog.edit', array('Pelicula'=>$pelis) , array('Company'=>$company));
     }
 
     public function getLogin()
@@ -51,6 +53,10 @@ class CatalogController extends Controller
         $Movie->director = $request->input('director');
         $Movie->poster = $request->input('poster');
         $Movie->synopsis = $request->input('synopsis');
+        $Movie->synopsis = $request->input('synopsis');
+        $Movie->minAge = $request->input('minAge');
+        $Movie->id_company = $request->input('id_company');
+        $Movie->rented_times = 0;
         $Movie->save();
         Notification::success('Success message');
         return redirect('/catalog');
@@ -65,6 +71,8 @@ class CatalogController extends Controller
         $Movie->director = $request->input('director');
         $Movie->poster = $request->input('poster');
         $Movie->synopsis = $request->input('synopsis');
+        $Movie->minAge = $request->input('minAge');
+        $Movie->id_company = $request->input('id_company');
         $Movie->save();
         Notification::success('Success message');
         return redirect('/catalog/show/'.$id);

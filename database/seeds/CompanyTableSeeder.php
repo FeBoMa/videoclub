@@ -87,7 +87,7 @@ class CompanyTableSeeder extends Seeder {
             'fundation' => '1919',
             'president' => 'William J. Bernstein',
             'companyName' => 'Columbia Pictures',
-            'poster' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Orionpictures-logo.svg/2000px-Orionpictures-logo.svg.png'
+            'poster' => 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fq4T4vdAV5Vk%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dq4T4vdAV5Vk&docid=07RAmg4rFD-IOM&tbnid=T8Ik2PdffWrgLM%3A&vet=10ahUKEwiPvOGP-uvgAhUD3xoKHfCbCgQQMwg9KAEwAQ..i&w=1920&h=1036&safe=active&client=firefox-b-d&bih=654&biw=1366&q=columbia%20pictures&ved=0ahUKEwiPvOGP-uvgAhUD3xoKHfCbCgQQMwg9KAEwAQ&iact=mrc&uact=8#h=1036&imgdii=IHk1uXojTeIjAM:&vet=10ahUKEwiPvOGP-uvgAhUD3xoKHfCbCgQQMwg9KAEwAQ..i&w=1920.png'
         ),
         array(//11
             'fundation' => '1935',
