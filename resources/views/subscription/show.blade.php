@@ -3,11 +3,11 @@
 @section('content')
 <?php 
 //print_r($list);
-
+/*
 foreach ($list as $key) {
     print_r($key);
     echo "<br><br>";
-}
+}*/
 ?>
 
 <table border="1px">

@@ -14,12 +14,12 @@ class CreateUsersmoviesTable extends Migration
     
     public function up()
     {
-        Schema::create('usersmovies', function (Blueprint $table) {
-            $table->integer('id_movies')->unsigned();
-            $table->foreign('id_movies')->references('id')->on('movies')->onDelete('cascade');
+        Schema::create('movie_user', function (Blueprint $table) {
+            $table->integer('movie_id')->unsigned();
+            $table->foreign('movie_id')->references('id')->on('movies')->onDelete('cascade');
 
-            $table->integer('id_users')->unsigned();
-            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('rented');
             $table->timestamps();
         });
@@ -32,6 +32,6 @@ class CreateUsersmoviesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usersmovies');
+        Schema::dropIfExists('movie_user');
     }
 }

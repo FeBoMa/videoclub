@@ -2,6 +2,6 @@
 
 @section('content')
 <?php 
-print_r($User->name);
+print_r($list);
 ?>
 @stop

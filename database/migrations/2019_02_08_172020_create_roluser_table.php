@@ -13,13 +13,13 @@ class CreateRoluserTable extends Migration
      */
     public function up()
     {
-        Schema::create('roluser', function (Blueprint $table) {
+        Schema::create('rol_user', function (Blueprint $table) {
             
-            $table->integer('id_rol')->unsigned();
-            $table->foreign('id_rol')->references('id_rol')->on('rol')->onDelete('cascade');
+            $table->integer('rol_id')->unsigned();
+            $table->foreign('rol_id')->references('id')->on('rol')->onDelete('cascade');
 
-            $table->integer('id_users')->unsigned();
-            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             
             $table->timestamps();
         });
@@ -32,6 +32,6 @@ class CreateRoluserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roluser');
+        Schema::dropIfExists('rol_user');
     }
 }

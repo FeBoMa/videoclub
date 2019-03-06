@@ -19,8 +19,9 @@ class UserController extends Controller
         $id = Auth::id();
       }
       $user = User::findOrFail($id);
-    
-    return view('user.show', array('User'=>$user));
+      $list = $user->movies;
+
+      return view('user.show', compact('list'));
   }
 
   public function getEdit($id = null){
