@@ -22,10 +22,15 @@
                     </a>
                 </li>
 
-
                 <li class="nav-item {{  Request::is('/company') ? 'active' : ''}}">
                     <a class="nav-link" href="{{url('/company')}}">                      
                         Compañias
+                    </a>
+                </li>
+
+                <li class="nav-item {{  Request::is('/company/create') ? 'active' : ''}}">
+                    <a class="nav-link" href="{{url('/company/create')}}">
+                        <span>&#10010</span> Nueva compañia
                     </a>
                 </li>
 

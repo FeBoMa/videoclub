@@ -46,10 +46,10 @@
              </div>
 
              <div class="form-group">
-                        <label for="synopsis">Comapñia</label>
-                        <select name="id_company" id="id_company" class="form-control">
+                        <label for="synopsis">Compañia</label>
+                        <select name="company_id" id="company_id" class="form-control">
                            @foreach($Company as $com)
-                              <option name="id_company" id="id_company" value="{{$com->id_company}}">{{$com->id_company}}.- {{$com->companyName}}</option>
+                              <option name="company_id" id="company_id" value="{{$com->id}}">{{$com->id}}.- {{$com->companyName}}</option>
                            @endforeach
                         </select>
                     </div>

@@ -21,7 +21,7 @@ class CatalogController extends Controller
     public function getShow($id)
     {
 		$pelis = Movie::findOrFail($id);
-        $company = Company::findOrFail($pelis->id_company);
+        $company = Company::findOrFail($pelis->company_id);
 		return view('catalog.show', array('Pelicula'=>$pelis), array('Company'=>$company));
 		//return view('catalog.show', array('Pelicula'=>$this->arrayPeliculas[$id],'id'=>$id));
 
@@ -55,7 +55,7 @@ class CatalogController extends Controller
         $Movie->synopsis = $request->input('synopsis');
         $Movie->synopsis = $request->input('synopsis');
         $Movie->minAge = $request->input('minAge');
-        $Movie->id_company = $request->input('id_company');
+        $Movie->company_id = $request->input('company_id');
         $Movie->rented_times = 0;
         $Movie->save();
         Notification::success('Success message');
@@ -72,7 +72,7 @@ class CatalogController extends Controller
         $Movie->poster = $request->input('poster');
         $Movie->synopsis = $request->input('synopsis');
         $Movie->minAge = $request->input('minAge');
-        $Movie->id_company = $request->input('id_company');
+        $Movie->company_id = $request->input('company_id');
         $Movie->save();
         Notification::success('Success message');
         return redirect('/catalog/show/'.$id);
