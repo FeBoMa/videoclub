@@ -14,6 +14,7 @@ class CreateLocalmovieTable extends Migration
     public function up()
     {
         Schema::create('localmovie', function (Blueprint $table) {
+            $table->increments('id')->unsigned();
             $table->integer('movie_id')->unsigned();
             $table->foreign('movie_id')->references('id')->on('movies')->onDelete('cascade');
 

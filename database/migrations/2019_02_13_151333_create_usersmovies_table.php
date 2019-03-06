@@ -15,6 +15,7 @@ class CreateUsersmoviesTable extends Migration
     public function up()
     {
         Schema::create('movie_user', function (Blueprint $table) {
+            $table->increments('id')->unsigned();
             $table->integer('movie_id')->unsigned();
             $table->foreign('movie_id')->references('id')->on('movies')->onDelete('cascade');
 
