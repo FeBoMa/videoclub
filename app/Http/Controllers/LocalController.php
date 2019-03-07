@@ -50,9 +50,21 @@ class LocalController extends Controller {
     public function getShow($id) {
         $local = Local::findOrFail($id);
         $list = $local->salas;
+<<<<<<< HEAD
+        return view('local.show', compact('list'),array('Local' => $local));
+=======
 
         return view('local.show', compact('list'), array('Local' => $local));
+>>>>>>> 77f50625fec396a72273bf7cf6eb5b920a1974d3
     }
+
+    public function getMovies($id = null){
+        $local = Local::findOrFail($id);
+        $list = $local->movies;
+    
+        return view('local.movies', compact('list'));
+    }
+
 
     public function getCreate() {
         $pelis = Movie::all();

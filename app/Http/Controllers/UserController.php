@@ -19,10 +19,20 @@ class UserController extends Controller
         $id = Auth::id();
       }
       $user = User::findOrFail($id);
-      $list = $user->movies::select('id');
+      $list = $user->movies;
 
       return view('user.show', compact('list'));
   }
+
+  public function getRols($id = null){
+    if(!$id){
+      $id = Auth::id();
+    }
+    $user = User::findOrFail($id);
+    $list = $user->rols;
+
+    return view('user.rols', compact('list'));
+}
 
   public function getEdit($id = null){
     if(!$id){
