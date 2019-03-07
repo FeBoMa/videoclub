@@ -17,11 +17,16 @@ class LocalController extends Controller {
     public function getShow($id){
         $local = Local::findOrFail($id);
         $list = $local->salas;
- 
         return view('local.show', compact('list'),array('Local' => $local));
-               
-        
     }
+
+    public function getMovies($id = null){
+        $local = Local::findOrFail($id);
+        $list = $local->movies;
+    
+        return view('local.movies', compact('list'));
+    }
+
 
     public function getCreate() {
         $pelis = Movie::all();

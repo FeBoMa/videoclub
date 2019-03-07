@@ -45,6 +45,7 @@ Route::put('/company/edit/{id}', 'CompanyController@putEdit');
 
 //Local
 Route::get('/local','LocalController@getIndex');
+Route::get('/local/movies/{id}','LocalController@getMovies');
 Route::get('/local/show/{id}', 'LocalController@getShow');
 Route::get('/local/create', 'LocalController@getCreate');
 Route::get('/local/edit/{id}', 'LocalController@getEdit');
@@ -66,6 +67,7 @@ Route::put('/sala/edit/{id}', 'SalaController@putEdit');
 
 //Users
 Route::get('/user', 'UserController@getShow');
+Route::get('/user/rol', 'UserController@getRols');
 Route::get('/user/edit', 'UserController@getEdit');
 Route::put('/user/edit', 'UserController@putEdit');
 
