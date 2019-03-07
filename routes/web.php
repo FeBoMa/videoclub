@@ -31,6 +31,7 @@ Route::put('/catalog/edit/{id}', 'CatalogController@putEdit');
 Route::put('/catalog/rent/{id}', 'CatalogController@putRent');
 Route::put('/catalog/return/{id}', 'CatalogController@putReturn');
 Route::delete('/catalog/delete/{id}', 'CatalogController@deleteMovie');
+Route::get('/catalog/pdf', 'CatalogController@pdf');
 
 
 //Company
@@ -42,6 +43,7 @@ Route::delete('/company/delete/{id}', 'CompanyController@deleteCompany');
 
 Route::post('/company/create', 'CompanyController@postCreate');
 Route::put('/company/edit/{id}', 'CompanyController@putEdit');
+Route::get('/company/pdf', 'CompanyController@pdf');
 
 //Local
 Route::get('/local','LocalController@getIndex');
@@ -53,6 +55,8 @@ Route::delete('/local/delete/{id}', 'LocalController@deleteLocal');
 
 Route::post('/local/create', 'LocalController@postCreate');
 Route::put('/local/edit/{id}', 'LocalController@putEdit');
+Route::get('/local/pdf', 'LocalController@pdf');
+
 
 //Salas
 

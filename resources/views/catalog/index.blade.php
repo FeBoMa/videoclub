@@ -2,6 +2,11 @@
 
 @section('content')
 
+  <div style="margin-bottom: 15px;" class="col-md-5" align="left">
+     <a href="{{ url('/catalog/pdf') }}" class="btn btn-danger">PDF</a>
+    </div>
+   
+   
 <div class="row">
     @foreach( $arrayPeliculas as $pelicula )
     <div class="col-xs-6 col-sm-4 col-md-3 text-center">
