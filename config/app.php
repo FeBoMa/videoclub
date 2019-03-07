@@ -178,6 +178,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Krucas\Notification\NotificationServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        
     ],
 
     /*
@@ -228,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Notification' => Krucas\Notification\Facades\Notification::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        
     ],
 
 ];

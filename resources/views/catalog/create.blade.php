@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-
+<script src="js/sweetalert.min.js"></script>
+@include('sweet::alert')
 <div class="row" style="margin-top:40px">
     <div class="offset-md-3 col-md-6">
         <div class="card">

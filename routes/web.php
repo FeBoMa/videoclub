@@ -33,6 +33,8 @@ Route::put('/catalog/return/{id}', 'CatalogController@putReturn');
 Route::delete('/catalog/delete/{id}', 'CatalogController@deleteMovie');
 Route::get('/catalog/pdf', 'CatalogController@pdf');
 
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
 
 //Company
 Route::get('/company', 'CompanyController@getIndex');
