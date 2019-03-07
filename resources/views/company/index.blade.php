@@ -1,7 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
-
+<div style="margin-bottom: 15px;" class="col-md-5" align="left">
+     <a href="{{ url('/company/pdf') }}" class="btn btn-danger">PDF</a>
+    </div>
+   
 <div>
 
     <ul>

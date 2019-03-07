@@ -7,8 +7,44 @@ use Illuminate\Routing\Controller;
 use App\Movie;
 use App\Company;
 use Notification;
+use PDF;
 
 class CatalogController extends Controller {
+
+    public function pdf() {
+        $pdf = \App::make('dompdf.wrapper');
+        $pdf->loadHTML($this->convert_customer_data_to_html());
+        return $pdf->stream();
+    }
+
+    public function convert_customer_data_to_html() {
+        $pelis = Movie::all();
+
+        $output = '
+     <h3 align="center">Catálogo</h3>
+     <table width="100%" style="border-collapse: collapse; border: 0px;">
+      <tr>
+    <th style="border: 1px solid; padding:12px;" width="10%">Título</th>
+    <th style="border: 1px solid; padding:12px;" width="10%">Año</th>
+    <th style="border: 1px solid; padding:12px;" width="15%">Director</th>
+    <th style="border: 1px solid; padding:12px;" width="5%">Alquilado</th>
+    <th style="border: 1px solid; padding:12px;" width="60%">Synopsis</th>
+    </tr>
+     ';
+        foreach ($pelis as $pelicula) {
+            $output .= '
+      <tr>
+       <td style="border: 1px solid; padding:12px;">' . $pelicula->title . '</td>
+       <td style="border: 1px solid; padding:12px;">' . $pelicula->year . '</td>
+       <td style="border: 1px solid; padding:12px;">' . $pelicula->director . '</td>
+       <td style="border: 1px solid; padding:12px;">' . $pelicula->rented . '</td>
+       <td style="border: 1px solid; padding:12px;">' . $pelicula->synopsis . '</td>
+      </tr>
+      ';
+        }
+        $output .= '</table>';
+        return $output;
+    }
 
     public function getIndex() {
         $pelis = Movie::all();

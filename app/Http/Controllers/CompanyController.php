@@ -8,6 +8,39 @@ use Illuminate\Http\Request;
 
 class CompanyController extends Controller {
 
+    public function pdf() {
+        $pdf = \App::make('dompdf.wrapper');
+        $pdf->loadHTML($this->convert_customer_data_to_html());
+        return $pdf->stream();
+    }
+
+    public function convert_customer_data_to_html() {
+        $compa = Company::all();
+
+        $output = '
+     <h3 align="center">Compañias</h3>
+     <table width="100%" style="border-collapse: collapse; border: 0px;">
+      <tr>
+    <th style="border: 1px solid; padding:12px;" width="10%">Id</th>
+    <th style="border: 1px solid; padding:12px;" width="10%">Fundación</th>
+    <th style="border: 1px solid; padding:12px;" width="25%">Nombre compañia</th>
+    <th style="border: 1px solid; padding:12px;" width="35%">Presidente</th>
+    </tr>
+     ';
+        foreach ($compa as $compañia) {
+            $output .= '
+      <tr>
+       <td style="border: 1px solid; padding:12px;">' . $compañia->id . '</td>
+       <td style="border: 1px solid; padding:12px;">' . $compañia->fundation . '</td>
+       <td style="border: 1px solid; padding:12px;">' . $compañia->companyName . '</td>
+       <td style="border: 1px solid; padding:12px;">' . $compañia->president . '</td>
+      </tr>
+      ';
+        }
+        $output .= '</table>';
+        return $output;
+    }
+
     public function getIndex() {
         $compa = Company::all();
         return view('company.index', array('arrayCompanies' => $compa));
@@ -18,7 +51,7 @@ class CompanyController extends Controller {
 
         $compa = Company::findOrFail($id);
         $pelis = Movie::all();
-        return view('company.show', array('Company' => $compa), array('arrayPeliculas'=>$pelis));
+        return view('company.show', array('Company' => $compa), array('arrayPeliculas' => $pelis));
         //return view('company.show', array('Company'=>$this->arrayCompanies[$id],'id'=>$id));
     }
 
@@ -53,7 +86,7 @@ class CompanyController extends Controller {
         $Company->president = $request->input('president');
         $Company->poster = $request->input('poster');
         $Company->save();
-      //  Notification::success('Success message');
+        //  Notification::success('Success message');
         return redirect('/company/show/' . $id);
     }
 

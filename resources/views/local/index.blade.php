@@ -2,6 +2,10 @@
 
 @section('content')
 
+  <div style="margin-bottom: 15px;" class="col-md-5" align="left">
+     <a href="{{ url('/local/pdf') }}" class="btn btn-danger">PDF</a>
+    </div>
+
 <div>
     <ul>
         <li class="nav-item {{  Request::is('catalog/local/create') ? 'active' : ''}}">
