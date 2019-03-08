@@ -18,8 +18,9 @@ class UserController extends Controller
       if(!$id){
         $id = Auth::id();
       }
-      $user = User::findOrFail($id);
-      $list = $user->movies;
+      $list = User::find($id)->movies->where('id',10);
+      //$list = App\Post::find(1)->comments()->where('title', 'foo')->first();
+      //$user = $user->movies->where('User.email','Fbord@gmail.com')->get();
 
       return view('user.show', compact('list'));
   }

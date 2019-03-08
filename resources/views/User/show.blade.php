@@ -2,6 +2,10 @@
 
 @section('content')
 <?php 
-print_r($list);
+foreach ($list as $key) {
+    print_r($list);
+    echo "<br><br>";
+}
+
 ?>
 @stop
