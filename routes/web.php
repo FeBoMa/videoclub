@@ -35,6 +35,7 @@ Route::get('/catalog/pdf', 'CatalogController@pdf');
 Route::get('/catalog/excel', 'CatalogController@excel');
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+Route::get("catalog/mySearch","CatalogController@mySearch");
 
 
 

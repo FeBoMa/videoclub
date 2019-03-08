@@ -13,6 +13,19 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\MoviesExport;
 
 class CatalogController extends Controller {
+    
+       public function mySearch(Request $request)
+    {
+    	if($request->has('search')){
+    		$movies = Movie::search($request->get('search'))->get();	
+    	}else{
+    		$movies = Movie::get();
+    	}
+
+       
+    	return view('/catalog/mySearch', compact('movies'));
+
+    }
 
     public function excel() {
         return Excel::download(new MoviesExport, 'movies.xlsx');

@@ -3,14 +3,14 @@
 @section('content')
 
 
-  <div style="margin-bottom: 15px;" class="col-md-5" align="left">
-     <a href="{{ url('/catalog/pdf') }}" class="btn btn-danger">PDF</a>
-    </div>
-<div style="margin-bottom: 15px;" class="col-md-5" align="left">
+<div style="margin-bottom: 25px;" class="col-md-5" align="left">
+    <a href="{{ url('/catalog/pdf') }}" class="btn btn-danger">PDF</a>
      <a href="{{ url('/catalog/excel') }}" class="btn btn-danger">EXCEL</a>
-    </div>
-   
-   
+     <a style="margin-left: 100px" href="{{ url('/catalog/mySearch') }}" class="btn btn-primary">Buscar Pelicula</a>
+</div>
+
+
+
 <div class="row">
     @foreach( $arrayPeliculas as $pelicula )
     <div class="col-xs-6 col-sm-4 col-md-3 text-center">
