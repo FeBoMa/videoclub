@@ -2,11 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Company;
-use App\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use App\Movie;
+use App\Company;
+use Notification;
+use PDF;
+use Alert;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\CompaniesExport;
 
 class CompanyController extends Controller {
+    
+    public function excel() {
+        return Excel::download(new CompaniesExport, 'companies.xlsx');
+    }
 
     public function pdf() {
         $pdf = \App::make('dompdf.wrapper');

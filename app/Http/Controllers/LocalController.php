@@ -2,11 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Local;
-use App\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use App\Movie;
+use App\Local;
+use Notification;
+use PDF;
+use Alert;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\LocalsExport;
 
 class LocalController extends Controller {
+
+    public function excel() {
+        return Excel::download(new LocalsExport, 'Locals.xlsx');
+    }
 
     public function pdf() {
         $pdf = \App::make('dompdf.wrapper');
@@ -15,7 +25,7 @@ class LocalController extends Controller {
     }
 
     public function convert_customer_data_to_html() {
-         $local = Local::all();
+        $local = Local::all();
 
         $output = '
      <h3 align="center">Local</h3>
@@ -50,21 +60,16 @@ class LocalController extends Controller {
     public function getShow($id) {
         $local = Local::findOrFail($id);
         $list = $local->salas;
-<<<<<<< HEAD
-        return view('local.show', compact('list'),array('Local' => $local));
-=======
 
         return view('local.show', compact('list'), array('Local' => $local));
->>>>>>> 77f50625fec396a72273bf7cf6eb5b920a1974d3
     }
 
-    public function getMovies($id = null){
+    public function getMovies($id = null) {
         $local = Local::findOrFail($id);
         $list = $local->movies;
-    
+
         return view('local.movies', compact('list'));
     }
-
 
     public function getCreate() {
         $pelis = Movie::all();

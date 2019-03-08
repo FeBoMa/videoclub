@@ -13,4 +13,6 @@ class Movie extends Model
     public function locals(){
         return $this->belongsToMany(Local::class);
     }
+    
+    
 }

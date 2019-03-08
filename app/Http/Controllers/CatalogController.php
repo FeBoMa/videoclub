@@ -9,11 +9,17 @@ use App\Company;
 use Notification;
 use PDF;
 use Alert;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\MoviesExport;
 
 class CatalogController extends Controller {
 
+    public function excel() {
+        return Excel::download(new MoviesExport, 'movies.xlsx');
+    }
+
     public function pdf() {
-       
+
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($this->convert_customer_data_to_html());
         return $pdf->stream();
@@ -49,7 +55,7 @@ class CatalogController extends Controller {
     }
 
     public function getIndex() {
-      
+
         $pelis = Movie::all();
         return view('catalog.index', array('arrayPeliculas' => $pelis));
         //return view('catalog.index',array('arrayPeliculas'=>$this->arrayPeliculas));
@@ -90,7 +96,7 @@ class CatalogController extends Controller {
         $Movie->rented_times = 0;
         $Movie->save();
         //Notification::success('Success message');
-         alert()->success('Success Message', 'Optional Title');
+        alert()->success('Success Message', 'Optional Title');
         return redirect('/catalog');
         //return view('catalog.create');
     }
