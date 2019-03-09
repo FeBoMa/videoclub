@@ -18,7 +18,7 @@ class UserController extends Controller
       if(!$id){
         $id = Auth::id();
       }
-      $list = User::find($id)->movies->where('id',10);
+      $list = User::findOrFail($id)->movies;//->where('id',10);
       //$list = App\Post::find(1)->comments()->where('title', 'foo')->first();
       //$user = $user->movies->where('User.email','Fbord@gmail.com')->get();
 
