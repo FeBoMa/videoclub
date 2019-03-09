@@ -86,6 +86,11 @@ Route::get('/user/{id}', 'UserController@getShow');
 Route::get('/user/edit/{id}', 'UserController@getEdit');
 Route::put('/user/edit/{id}', 'UserController@putEdit');
 
+
+//Movies
+Route::get('/movie/{id}', 'MoviesController@getShow');
+
+
 //Subs
 Route::get('/subscription/{id}', 'SubscriptionController@getShow');
 

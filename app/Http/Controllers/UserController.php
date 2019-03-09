@@ -10,7 +10,6 @@ use Mail;
 
 use Notification;
 
-
 class UserController extends Controller
 {
     
@@ -18,9 +17,9 @@ class UserController extends Controller
       if(!$id){
         $id = Auth::id();
       }
-      $list = User::findOrFail($id)->movies;//->where('id',10);
+      $user = User::findOrFail($id);//()->attach(1);//->where('id',10);
       //$list = App\Post::find(1)->comments()->where('title', 'foo')->first();
-      //$user = $user->movies->where('User.email','Fbord@gmail.com')->get();
+      $list = $user->movies;//->where('User.email','Fbord@gmail.com')->get();
 
       return view('user.show', compact('list'));
   }
