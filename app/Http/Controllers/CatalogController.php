@@ -14,6 +14,39 @@ use App\Exports\MoviesExport;
 
 class CatalogController extends Controller {
     
+ public function myCaptcha()
+    {
+        return view('myCaptcha');
+    }
+
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function myCaptchaPost(Request $request)
+    {
+        request()->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+            'captcha' => 'required|captcha'
+        ],
+        ['captcha.captcha'=>'Invalid captcha code.']);
+        dd("You are here :) .");
+    }
+
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function refreshCaptcha()
+    {
+        return response()->json(['captcha'=> captcha_img()]);
+    }
+    
        public function mySearch(Request $request)
     {
     	if($request->has('search')){

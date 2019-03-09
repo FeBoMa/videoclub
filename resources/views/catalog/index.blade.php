@@ -1,12 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
+@include('cookieConsent::index')
 
 
 <div style="margin-bottom: 25px;" class="col-md-5" align="left">
     <a href="{{ url('/catalog/pdf') }}" class="btn btn-danger">PDF</a>
      <a href="{{ url('/catalog/excel') }}" class="btn btn-danger">EXCEL</a>
      <a style="margin-left: 100px" href="{{ url('/catalog/mySearch') }}" class="btn btn-primary">Buscar Pelicula</a>
+    
 </div>
 
 
