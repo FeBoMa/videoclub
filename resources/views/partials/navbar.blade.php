@@ -35,6 +35,18 @@
                     </a>
                 </li>
 
+                <li class="nav-item {{  Request::is('/user') ? 'active' : ''}}">
+                    <a class="nav-link" href="{{url('/user')}}">
+                        Peliculas Alquiladas
+                    </a>
+                </li>
+
+                <li class="nav-item {{  Request::is('/user/edit') ? 'active' : ''}}">
+                    <a class="nav-link" href="{{url('/user/edit')}}">
+                        Editar Datos
+                    </a>
+                </li>
+
             </ul>
 
             <ul class="navbar-nav navbar-right">

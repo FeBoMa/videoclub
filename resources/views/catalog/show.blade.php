@@ -1,14 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-<?php 
-if($list->count() > 0){
-  echo "hola";
-  echo $list->count();
-}else{
- echo "no";
- echo $list->count();
-} ?>
 <div class="row">
 
     <div class="col-sm-4">
@@ -56,6 +48,14 @@ if($list->count() > 0){
           <a class="btn btn-warning" href="/catalog/edit/{{$Pelicula->id}}" role="button">Editar la película</a>
           <a class="btn btn-outline-dark" href="/catalog" role="button">< Volver al listado</a>
     
+          <form action="{{action('MoviesController@getShow', $Pelicula->id)}}" 
+            method="POST" style="display:inline">
+            {{ method_field('GET') }}
+            {{ csrf_field() }}
+            <button type="submit" class="btn btn-primary" style="display:inline">
+                Usuarios con alquiler
+            </button>
+        </form>
 
           <form action="{{action('CatalogController@deleteMovie', $Pelicula->id)}}" 
             method="POST" style="display:inline">
@@ -65,11 +65,6 @@ if($list->count() > 0){
                 Eliminar
             </button>
         </form>
-
-
-
-
-
 
         </div>
 </div>
