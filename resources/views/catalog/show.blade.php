@@ -45,9 +45,9 @@
         </form>
           <!--<a class="btn btn-primary" href="#" role="button">Alquilar película</a>-->
           @endif
-          <a class="btn btn-warning" href="/catalog/edit/{{$Pelicula->id}}" role="button">Editar la película</a>
-          <a class="btn btn-outline-dark" href="/catalog" role="button">< Volver al listado</a>
     
+          <a class="btn btn-outline-dark" href="/catalog" role="button">< Volver al listado</a>
+          @if($rol->count() > 0)
           <form action="{{action('MoviesController@getShow', $Pelicula->id)}}" 
             method="POST" style="display:inline">
             {{ method_field('GET') }}
@@ -56,7 +56,8 @@
                 Usuarios con alquiler
             </button>
         </form>
-
+          <a class="btn btn-warning" href="/catalog/edit/{{$Pelicula->id}}" role="button">Editar la película</a>
+        
           <form action="{{action('CatalogController@deleteMovie', $Pelicula->id)}}" 
             method="POST" style="display:inline">
             {{ method_field('delete') }}
@@ -65,7 +66,7 @@
                 Eliminar
             </button>
         </form>
-
+        @endif
         </div>
 </div>
 @stop

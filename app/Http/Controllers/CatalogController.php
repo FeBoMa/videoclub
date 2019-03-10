@@ -11,6 +11,7 @@ use PDF;
 use Alert;
 use Auth;
 use App\User;
+use App\Rol;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\MoviesExport;
 
@@ -90,12 +91,13 @@ class CatalogController extends Controller {
 
         $user = User::findOrFail(Auth::id());//()->attach(1);//->where('id',10);
         $list = $user->movies->where('id',$id);
-        return view('catalog.show', compact('Pelicula','Company','list'));
+        $rol = $user->rols->where('id',1);
 
-        
-              //$list = App\Post::find(1)->comments()->where('title', 'foo')->first();
+        return view('catalog.show', compact('Pelicula','Company','list','rol'));
 
-         //return view('catalog.show', array('Pelicula' => $pelis), array('Company' => $company));
+
+        //$list = App\Post::find(1)->comments()->where('title', 'foo')->first();
+        //return view('catalog.show', array('Pelicula' => $pelis), array('Company' => $company));
         //return view('catalog.show', array('Pelicula'=>$this->arrayPeliculas[$id],'id'=>$id));
     }
 
