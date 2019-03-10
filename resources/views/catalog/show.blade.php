@@ -1,7 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
-
+<?php 
+if($list->count() > 0){
+  echo "hola";
+  echo $list->count();
+}else{
+ echo "no";
+ echo $list->count();
+} ?>
 <div class="row">
 
     <div class="col-sm-4">
@@ -10,7 +17,6 @@
     <div class="col-sm-8">
         <h4 style="min-height:45px;margin:5px 0 10px 0">
             {{$Pelicula->title}}
-            
         </h4>
           <p>Año: {{$Pelicula->year}}</p>
           <p>Director: {{$Pelicula->director}}</p>
@@ -26,7 +32,7 @@
           </p>
           <p>Edad minima: {{$Pelicula->minAge}} años</p>
 
-          @if($Pelicula['rented'])
+          @if($list->count() > 0)
           <form action="{{action('CatalogController@putReturn', $Pelicula->id)}}" 
             method="POST" style="display:inline">
             {{ method_field('PUT') }}

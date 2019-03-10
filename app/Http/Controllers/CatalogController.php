@@ -9,6 +9,8 @@ use App\Company;
 use Notification;
 use PDF;
 use Alert;
+use Auth;
+use App\User;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\MoviesExport;
 
@@ -41,7 +43,6 @@ class CatalogController extends Controller {
     }
 
     public function pdf() {
-
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($this->convert_customer_data_to_html());
         return $pdf->stream();
@@ -84,9 +85,17 @@ class CatalogController extends Controller {
     }
 
     public function getShow($id) {
-        $pelis = Movie::findOrFail($id);
-        $company = Company::findOrFail($pelis->company_id);
-        return view('catalog.show', array('Pelicula' => $pelis), array('Company' => $company));
+        $Pelicula = Movie::findOrFail($id);
+        $Company = Company::findOrFail($Pelicula->company_id);
+
+        $user = User::findOrFail(Auth::id());//()->attach(1);//->where('id',10);
+        $list = $user->movies->where('id',$id);
+        return view('catalog.show', compact('Pelicula','Company','list'));
+
+        
+              //$list = App\Post::find(1)->comments()->where('title', 'foo')->first();
+
+         //return view('catalog.show', array('Pelicula' => $pelis), array('Company' => $company));
         //return view('catalog.show', array('Pelicula'=>$this->arrayPeliculas[$id],'id'=>$id));
     }
 
@@ -138,17 +147,25 @@ class CatalogController extends Controller {
     }
 
     public function putRent($id) {
-        $Movie = Movie::findOrFail($id);
-        $Movie->rented = 1;
-        $Movie->save();
+        //$Movie = Movie::findOrFail($id);
+        //$Movie->rented = 1;
+        //$Movie->save();
+
+        $user = User::findOrFail(Auth::id());
+        $list = $user->movies()->attach($id);
+
         Notification::success('Success Rent');
         return redirect('/catalog/show/' . $id);
     }
 
     public function putReturn($id) {
-        $Movie = Movie::findOrFail($id);
-        $Movie->rented = 0;
-        $Movie->save();
+        //$Movie = Movie::findOrFail($id);
+        //$Movie->rented = 0;
+        //$Movie->save();
+
+        $user = User::findOrFail(Auth::id());
+        $list = $user->movies()->detach($id);
+
         Notification::success('Success Retrun');
         return redirect('/catalog/show/' . $id);
     }
