@@ -17,7 +17,7 @@ class CreateLocalTable extends Migration
             $table->increments('id')->unsigned();  
             $table->string('address');
             $table->string('telephon');
-            $table->string('google_maps');
+            $table->string('google_maps',999);
             $table->timestamps();
   
         });

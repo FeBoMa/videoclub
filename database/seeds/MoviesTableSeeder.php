@@ -59,7 +59,7 @@ class MoviesTableSeeder extends Seeder
 			'title' => 'La lista de Schindler',
 			'year' => '1993', 
 			'director' => 'Steven Spielberg', 
-			'poster' => 'http://ia.media-imdb.com/images/M/MV5BMzMwMTM4MDU2N15BMl5BanBnXkFtZTgwMzQ0MjMxMDE@._V1_SX214_AL_.jpg', 
+			'poster' => 'http://es.web.img3.acsta.net/r_1280_720/pictures/14/02/27/09/35/442750.jpg', 
 			'rented' => false, 
 			'synopsis' => 'Segunda Guerra Mundial (1939-1945). Oskar Schindler (Liam Neeson), un hombre de enorme astucia y talento para las relaciones públicas, organiza un ambicioso plan para ganarse la simpatía de los nazis. Después de la invasión de Polonia por los alemanes (1939), consigue, gracias a sus relaciones con los nazis, la propiedad de una fábrica de Cracovia. Allí emplea a cientos de operarios judíos, cuya explotación le hace prosperar rápidamente. Su gerente (Ben Kingsley), también judío, es el verdadero director en la sombra, pues Schindler carece completamente de conocimientos para dirigir una empresa.',
 			'company_id' => '4',
@@ -92,7 +92,8 @@ class MoviesTableSeeder extends Seeder
 			'title' => 'El golpe',
 			'year' => '1973', 
 			'director' => 'George Roy Hill', 
-			'poster' => 'http://ia.media-imdb.com/images/M/MV5BMTY5MjM1OTAyOV5BMl5BanBnXkFtZTgwMDkwODg4MDE@._V1._CR52,57,915,1388_SX214_AL_.jpg', 
+			//'poster' => 'http://images.coveralia.com/audio/b/BSO_El_Golpe_(The_Sting)--Frontal.jpg', 
+			'poster' => 'http://es.web.img3.acsta.net/r_1280_720/medias/nmedia/18/90/17/85/20084556.jpg', 
 			'rented' => false, 
 			'synopsis' => 'Chicago, años treinta. Redford y Newman son dos timadores que deciden vengar la muerte de un viejo y querido colega, asesinado por orden de un poderoso gángster (Robert Shaw). Para ello urdirán un ingenioso y complicado plan con la ayuda de todos sus amigos y conocidos.'
 			,'company_id' => '4',
@@ -103,7 +104,7 @@ class MoviesTableSeeder extends Seeder
 			'title' => 'La vida es bella',
 			'year' => '1997', 
 			'director' => 'Roberto Benigni', 
-			'poster' => 'http://ia.media-imdb.com/images/M/MV5BMTQwMTM2MjE4Ml5BMl5BanBnXkFtZTgwODQ2NTYxMTE@._V1_SX214_AL_.jpg', 
+			'poster' => 'http://es.web.img3.acsta.net/c_215_290/medias/nmedia/18/67/61/66/20098979.jpg', 
 			'rented' => true, 
 			'synopsis' => 'En 1939, a punto de estallar la Segunda Guerra Mundial (1939-1945), el extravagante Guido llega a Arezzo (Toscana) con la intención de abrir una librería. Allí conoce a Dora y, a pesar de que es la prometida del fascista Ferruccio, se casa con ella y tiene un hijo. Al estallar la guerra, los tres son internados en un campo de exterminio, donde Guido hará lo imposible para hacer creer a su hijo que la terrible situación que están padeciendo es tan sólo un juego.'
 			,'company_id' => '5',
@@ -147,10 +148,10 @@ class MoviesTableSeeder extends Seeder
 			'title' => 'Sin perdón',
 			'year' => '1992', 
 			'director' => 'Clint Eastwood', 
-			'poster' => 'http://ia.media-imdb.com/images/M/MV5BMTkzNTc0NDc4OF5BMl5BanBnXkFtZTcwNTY1ODg3OA@@._V1_SY317_CR5,0,214,317_AL_.jpg', 
+			'poster' => 'https://www.ecartelera.com/carteles/6200/6236/001_m.jpg', 
 			'rented' => false, 
 			'synopsis' => 'William Munny (Clint Eastwood) es un pistolero retirado, viudo y padre de familia, que tiene dificultades económicas para sacar adelante a su hijos. Su única salida es hacer un último trabajo. En compañía de un viejo colega (Morgan Freeman) y de un joven inexperto (Jaimz Woolvett), Munny tendrá que matar a dos hombres que cortaron la cara a una prostituta.'
-			,'company_id' => '8',
+			,'company_id' => '6',
 			'rented_times' => 0,
 			'minAge' => 18
 		),
@@ -158,7 +159,7 @@ class MoviesTableSeeder extends Seeder
 			'title' => 'El precio del poder',
 			'year' => '1983', 
 			'director' => 'Brian De Palma', 
-			'poster' => 'http://ia.media-imdb.com/images/M/MV5BMjAzOTM4MzEwNl5BMl5BanBnXkFtZTgwMzU1OTc1MDE@._V1_SX214_AL_.jpg', 
+			'poster' => 'http://es.web.img3.acsta.net/r_1280_720/medias/nmedia/18/91/03/51/20126486.jpg', 
 			'rented' => false, 
 			'synopsis' => 'Tony Montana es un emigrante cubano frío y sanguinario que se instala en Miami con el propósito de convertirse en un gángster importante. Con la colaboración de su amigo Manny Rivera inicia una fulgurante carrera delictiva con el objetivo de acceder a la cúpula de una organización de narcos.'
 			,'company_id' => '4',
@@ -194,7 +195,7 @@ class MoviesTableSeeder extends Seeder
 			'poster' => 'http://ia.media-imdb.com/images/M/MV5BMTQ2NzkzMDI4OF5BMl5BanBnXkFtZTcwMDA0NzE1NA@@._V1_SX214_AL_.jpg', 
 			'rented' => false, 
 			'synopsis' => 'El FBI busca a "Buffalo Bill", un asesino en serie que mata a sus víctimas, todas adolescentes, después de prepararlas minuciosamente y arrancarles la piel. Para poder atraparlo recurren a Clarice Starling, una brillante licenciada universitaria, experta en conductas psicópatas, que aspira a formar parte del FBI. Siguiendo las instrucciones de su jefe, Jack Crawford, Clarice visita la cárcel de alta seguridad donde el gobierno mantiene encerrado a Hannibal Lecter, antiguo psicoanalista y asesino, dotado de una inteligencia superior a la normal. Su misión será intentar sacarle información sobre los patrones de conducta de "Buffalo Bill".'
-			,'company_id' => '9',
+			,'company_id' => '8',
 			'rented_times' => 0,
 			'minAge' => 18
 		),
@@ -213,7 +214,7 @@ class MoviesTableSeeder extends Seeder
 			'title' => 'La chaqueta metálica',
 			'year' => '1987', 
 			'director' => 'Stanley Kubrick', 
-			'poster' => 'http://ia.media-imdb.com/images/M/MV5BMjA4NzY4ODk4Nl5BMl5BanBnXkFtZTgwOTcxNTYxMTE@._V1_SX214_AL_.jpg', 
+			'poster' => 'http://es.web.img3.acsta.net/c_215_290/medias/nmedia/18/90/15/35/20083253.jpg', 
 			'rented' => true, 
 			'synopsis' => 'Un grupo de reclutas se prepara en Parish Island, centro de entrenamiento de la marina norteamericana. Allí está el sargento Hartman, duro e implacable, cuya única misión en la vida es endurecer el cuerpo y el alma de los novatos, para que puedan defenderse del enemigo. Pero no todos los jóvenes están preparados para soportar sus métodos. '
 			,'company_id' => '6',
@@ -224,7 +225,8 @@ class MoviesTableSeeder extends Seeder
 			'title' => 'Blade Runner',
 			'year' => '1982', 
 			'director' => 'Ridley Scott', 
-			'poster' => 'http://ia.media-imdb.com/images/M/MV5BMTA4MDQxNTk2NDheQTJeQWpwZ15BbWU3MDE2NjIyODk@._V1_SX214_AL_.jpg', 
+			//'poster' => 'http://images.coveralia.com/audio/b/BSO_Blade_Runner--Frontal.jpg', 
+			'poster' => 'http://www.proyectoscio.ucv.es/wp-content/uploads/2018/04/poster-de-Blade-Runner.jpg', 
 			'rented' => true, 
 			'synopsis' => 'A principios del siglo XXI, la poderosa Tyrell Corporation creó, gracias a los avances de la ingeniería genética, un robot llamado Nexus 6, un ser virtualmente idéntico al hombre pero superior a él en fuerza y agilidad, al que se dio el nombre de Replicante. Estos robots trabajaban como esclavos en las colonias exteriores de la Tierra. Después de la sangrienta rebelión de un equipo de Nexus-6, los Replicantes fueron desterrados de la Tierra. Brigadas especiales de policía, los Blade Runners, tenían órdenes de matar a todos los que no hubieran acatado la condena. Pero a esto no se le llamaba ejecución, se le llamaba "retiro". '
 			,'company_id' => '6',
@@ -238,7 +240,7 @@ class MoviesTableSeeder extends Seeder
 			'poster' => 'http://ia.media-imdb.com/images/M/MV5BMTQ1Nzg3MDQwN15BMl5BanBnXkFtZTcwNDE2NDU2MQ@@._V1_SY317_CR9,0,214,317_AL_.jpg', 
 			'rented' => false, 
 			'synopsis' => 'Para sobrellevar el insomnio crónico que sufre desde su regreso de Vietnam, Travis Bickle (Robert De Niro) trabaja como taxista nocturno en Nueva York. Es un hombre insociable que apenas tiene contacto con los demás, se pasa los días en el cine y vive prendado de Betsy (Cybill Shepherd), una atractiva rubia que trabaja como voluntaria en una campaña política. Pero lo que realmente obsesiona a Travis es comprobar cómo la violencia, la sordidez y la desolación dominan la ciudad. Y un día decide pasar a la acción.'
-			,'company_id' => '10',
+			,'company_id' => '9',
 			'rented_times' => 0,
 			'minAge' => 18
 		),
@@ -246,10 +248,10 @@ class MoviesTableSeeder extends Seeder
 			'title' => 'El club de la lucha',
 			'year' => '1999', 
 			'director' => 'David Fincher', 
-			'poster' => 'http://ia.media-imdb.com/images/M/MV5BMjIwNTYzMzE1M15BMl5BanBnXkFtZTcwOTE5Mzg3OA@@._V1_SX214_AL_.jpg', 
+			'poster' => 'https://popartsk.files.wordpress.com/2012/04/elclubdelapelea1.jpg', 
 			'rented' => true, 
 			'synopsis' => 'Un joven hastiado de su gris y monótona vida lucha contra el insomnio. En un viaje en avión conoce a un carismático vendedor de jabón que sostiene una teoría muy particular: el perfeccionismo es cosa de gentes débiles; sólo la autodestrucción hace que la vida merezca la pena. Ambos deciden entonces fundar un club secreto de lucha, donde poder descargar sus frustaciones y su ira, que tendrá un éxito arrollador.'
-			,'company_id' => '11',
+			,'company_id' => '3',
 			'rented_times' => 0,
 			'minAge' => 18
 		),

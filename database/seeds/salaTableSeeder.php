@@ -30,21 +30,21 @@ class SalaTableSeeder extends Seeder {
 
     private $arraySalas = array(
         array(
-            'capacity' => '1980',
-            'sala_name' => 'John Mayers',
-            'sala_photo' => 'photoooo',
+            'capacity' => '5',
+            'sala_name' => 'Carrie Fisher',
+            'sala_photo' => 'https://starwarsblog.starwars.com/wp-content/uploads/2016/12/unnamed-3-960x864.jpg',
             'local_id' => 1
         ),
         array(
             'capacity' => '3',
-            'sala_name' => 'Indiana Bones',
-            'sala_photo' => 'photoooo',
+            'sala_name' => 'Harrison Ford',
+            'sala_photo' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Y3n7NCYw6GQxHAxVt9rYQpF34DSkxy9okcNOmWs7-45PdYkTuQ',
             'local_id' => 1
         ),
         array(
-            'capacity' => '1900',
-            'sala_name' => 'Arnold Schuacheneger',
-            'sala_photo' => 'photooo',
+            'capacity' => '10',
+            'sala_name' => 'Mark Hamill',
+            'sala_photo' => 'https://s.hdnux.com/photos/15/27/70/3505694/7/920x920.jpg',
             'local_id' => 2
         )
     );

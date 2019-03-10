@@ -11,10 +11,12 @@
 
 <div class="row">
 
-    <div class="col-sm-4">
-        <img src="{{$Local->google_maps}}" style="height:200px"/>
+    <div class="col-sm-4" position="relative">
+        <iframe src="{{$Local->google_maps}}" 
+            width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+        </iframe>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-8"  position="relative">
         <h4 style="min-height:45px;margin:5px 0 10px 0">
             {{$Local->address}}
         </h4>

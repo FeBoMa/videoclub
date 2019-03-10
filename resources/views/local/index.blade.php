@@ -26,7 +26,9 @@
     @foreach( $arrayLocals as $local )
     <div class="col-xs-6 col-sm-4 col-md-3 text-center">
         <a href="{{ url('/local/show/' . $local->id)}}">
-            <img src="{{$local->google_maps}}" style="height:200px; width:200px;"/>
+            <iframe src="{{$local->google_maps}}" 
+                width="200" height="200" frameborder="0" style="border:0" allowfullscreen>
+            </iframe>
             <h4 style="min-height:45px;margin:5px 0 10px 0">
                 {{$local->address}}
             </h4>
