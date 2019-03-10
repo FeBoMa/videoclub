@@ -1,6 +1,12 @@
 @extends('layouts.master')
 
 @section('content')
+<style>
+    body{
+        background-color: lightblue;
+
+    }
+</style>
 
 <div class="row" style="margin-top:40px">
     <div class="offset-md-3 col-md-6">

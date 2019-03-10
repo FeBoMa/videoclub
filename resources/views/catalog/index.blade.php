@@ -3,6 +3,12 @@
 @section('content')
 @include('cookieConsent::index')
 
+<style>
+    body{
+        background-color: lightblue;
+
+    }
+</style>
 
 <div style="margin-bottom: 25px;" class="col-md-5" align="left">
     <a href="{{ url('/catalog/pdf') }}" class="btn btn-danger">PDF</a>

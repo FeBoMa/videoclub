@@ -8,15 +8,21 @@
 // echo "<br><br>";
 //}
 ?>
+<style>
+    body{
+        background-color: lightblue;
 
-<div class="row">
+    }
+</style>
+
+<div  class="row">
 
     <div class="col-sm-4" position="relative">
         <iframe src="{{$Local->google_maps}}" 
-            width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+            width="350" height="300" frameborder="0" style="border:" allowfullscreen>   
         </iframe>
     </div>
-    <div class="col-sm-8"  position="relative">
+    <div style="border: solid 1px #000000 " class="col-sm-8">
         <h4 style="min-height:45px;margin:5px 0 10px 0">
             {{$Local->address}}
         </h4>
@@ -48,7 +54,7 @@
     
     @foreach( $list as $key )
 
-    <div style="margin-top: 40px" class="col-xs-6 col-sm-4 col-md-3 text-center">
+    <div style="margin-top: 40px;" class="col-xs-6 col-sm-4 col-md-3 text-center">
         <a href="{{ url('/sala/show/' . $key->id) }}">
             <img src="{{$key->sala_photo}}" style="height:200px; width:200px;"/>
             <h4 style="min-height:45px;margin:5px 0 10px 0">

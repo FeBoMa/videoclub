@@ -105,7 +105,7 @@ class LocalController extends Controller {
         $Local->google_maps = $request->input('google_maps');
         $Local->save();
         //  Notification::success('Success message');
-        return redirect('/catalog/local/show/' . $id);
+        return redirect('/local/show/' . $id);
     }
 
     public function deleteLocal($id) {

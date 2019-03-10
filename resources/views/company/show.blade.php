@@ -2,6 +2,13 @@
 
 @section('content')
 
+<style>
+    body{
+        background-color: lightblue;
+
+    }
+</style>
+
 <div class="row">
 
     <div class="col-sm-4">

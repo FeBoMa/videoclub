@@ -22,7 +22,7 @@
 					<input type="text" name="search" class="form-control" placeholder="Search" value="{{ old('search') }}">
 				</div>
 				<div class="col-md-6">
-					<button class="btn btn-success">Search</button>
+					<button class="btn btn-success">Buscar</button>
                                         <a href="{{ url('/catalog') }}" class="btn btn-primary">Volver</a>
 				</div>
                             
